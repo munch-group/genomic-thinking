@@ -7,6 +7,9 @@ using his method in a large number of individuals from the Simons genome
 diversity project and from the 1000 genomes project, paper
 [here](https://www.biorxiv.org/content/early/2018/03/16/283606.full.pdf).
 
+It is easier to download the dataset and work in your own Rstudio, so i would suggest doing that.
+
+But if you insist just do it on the cluster
 Start up a notebook, and let us explore the dataset (remember to put in your username).
 
 ``` r
