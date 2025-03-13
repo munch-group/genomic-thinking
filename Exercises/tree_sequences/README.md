@@ -31,7 +31,7 @@ conda env create -f ~/populationgenomics/env/exercise_envs/bjarke-relate.yml
 All the Relate scripts can be run in this environment, so make sure the `pg-relate` is activated when you are working on this exericse. To allow Relate find some files it needs, you also need to run the commands below *in order*.
 
 ```
-conda activate bjarke-relate
+conda activate pg-relate-bjarke
 conda env config vars set LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 conda deactivate
 conda conda activate bjarke-relate
