@@ -58,7 +58,7 @@ Exercises are on Thursdays from 12:15 to 14:00. The week plan below has links to
 |  10 | **Admixture**, HMMs, [Review on admixture], [Paper on admixture inference]                            |                                                   |
 |  11 | **Tree sequences**                                                                                    | [Tree sequences]                                  |
 |  12 | **Direct and linked selection**, Coop chapt 12, 13, revisit [Paper on tree inference]                 | [Inference of positive selection]                 |
-|  13 | **Project presentations**,                                                                            | [GWAS quality control]                            |
+|  13 | **Projects, Popgen overview**, [Mandatory project description]                                     | [GWAS quality control]                            |
 |  14 | **GWAS review**, Population stratification review, Coop 99-120 (No Exercise this week)                | [Association testing]                             |
 |  15 | **Heritability**, [Review on heritability] ; Coop Sec 2.2 (p23-36) + Chapt 7 (p119-142)               | [Estimating heritability]                         |
 |  16 | **Break**                                                                                             | **Break**                                             |
@@ -99,6 +99,8 @@ Exercises are on Thursdays from 12:15 to 14:00. The week plan below has links to
 [Association testing]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/GWAS_association
 [Estimating heritability]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/heritability
 
+<!-- Project links -->
+[Mandatory project description]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Projects
 
 <!-- 
 1. Course intro and overview:  
