@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Genomic Thinking</title>
+<title>13&nbsp; Heritability – Genomic Thinking</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,28 +20,63 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./about.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-6b2306b05fee0b85d8c2d824c36e28c3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-543a54f79cd3f3d0ed9955bcaf4df6c8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../exercises/GWAS_association/README.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-6b2306b05fee0b85d8c2d824c36e28c3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-543a54f79cd3f3d0ed9955bcaf4df6c8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,23 +104,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<style>
-
-      .quarto-title-block .quarto-title-banner h1,
-      .quarto-title-block .quarto-title-banner h2,
-      .quarto-title-block .quarto-title-banner h3,
-      .quarto-title-block .quarto-title-banner h4,
-      .quarto-title-block .quarto-title-banner h5,
-      .quarto-title-block .quarto-title-banner h6
-      {
-        color: #FFFFFF;
-      }
-
-      .quarto-title-block .quarto-title-banner {
-        color: #FFFFFF;
-background: #003257;
-      }
-</style>
 
 
 </head>
@@ -93,13 +111,13 @@ background: #003257;
 <body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Welcome</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/README.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/heritability/README.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Heritability</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -109,29 +127,12 @@ background: #003257;
   </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Genomic Thinking</h1>
-            <p class="subtitle lead">AU course: Genomic Thinking</p>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Content</a> 
+      <a href="../../">Content</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -143,31 +144,31 @@ background: #003257;
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link">
+  <a href="../../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weekplan.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weekplan.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week plan</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./curriculum.html" class="sidebar-item-text sidebar-link">
+  <a href="../../curriculum.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Curriculum</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides2026.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides2026.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture slides</span></a>
   </div>
 </li>
@@ -182,79 +183,79 @@ background: #003257;
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/cluster_practicals/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/cluster_practicals/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cluster practicals</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/mapping_and_calling/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/mapping_and_calling/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Mapping and calling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/phasing/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/phasing/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Genotype phasing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/arg_and_smc/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/arg_and_smc/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ancestral Recombination Graphs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/historical_pop_size/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/historical_pop_size/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Historical populations size</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/population_structure/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/population_structure/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Population structure</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/admixture/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/admixture/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Historical populations sizes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/tree_sequences/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/tree_sequences/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tree sequences</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/selection/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/selection/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Positive selection</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/archaic_humans/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/archaic_humans/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Archaic ancestry in humans</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/GWAS_QC/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/GWAS_QC/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">GWAS Quality Control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/GWAS_association/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/GWAS_association/README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Association testing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/heritability/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/heritability/README.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Heritability</span></span></a>
   </div>
 </li>
@@ -265,102 +266,69 @@ background: #003257;
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
-  <li><a href="#student-presentations" id="toc-student-presentations" class="nav-link" data-scroll-target="#student-presentations">Student presentations</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/README.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/heritability/README.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Heritability</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Heritability</span></h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="welcome" class="level1 unnumbered">
-<h1 class="unnumbered">Welcome</h1>
-<p>This is the homepage for the AU course Genomic Thinking. You will find all course content here. The <a href="" title="https://brightspace.au.dk/d2l/home/203494">Brightspace course page</a> is only used for communication, and assignments.</p>
+</header>
+
+
+<section id="software" class="level3">
+<h3 class="anchored" data-anchor-id="software">Software:</h3>
+<p>In this exercise we will be using GCTA. You can see the documentation <a href="http://cnsgenomics.com/software/gcta/#Download">here</a>. We will be also using plink 1.9, you can see the documentation <a href="https://www.cog-genomics.org/plink/1.9/">here</a>.</p>
 </section>
-<section id="schedule" class="level1 unnumbered">
-<h1 class="unnumbered">Schedule</h1>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Week 1 (5)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Week 2 (6)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Week 3 (7)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Week 4 (8)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Week 5 (9)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href="">Week 6 (10)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false" href="">Week 7 (11)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false" href="">Week 8 (12)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" role="tab" aria-controls="tabset-1-9" aria-selected="false" href="">Week 9 (13)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-10-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-10" role="tab" aria-controls="tabset-1-10" aria-selected="false" href="">Week 10 (14)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-11-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-11" role="tab" aria-controls="tabset-1-11" aria-selected="false" href="">Week 11 (15)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-12-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-12" role="tab" aria-controls="tabset-1-12" aria-selected="false" href="">Week 12 (16)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-13-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-13" role="tab" aria-controls="tabset-1-13" aria-selected="false" href="">Week 13 (17)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-14-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-14" role="tab" aria-controls="tabset-1-14" aria-selected="false" href="">Week 14 (18)</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p><strong>Lectures:</strong> Course intro and overview: Coop chapt 1, 2, 3, <a href="https://www.nature.com/articles/nature18964">Paper: Simons Genome Diversity Project</a></p>
-<p><strong>Exercises:</strong> <a href="https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/cluster_practicals">Cluster practicals</a></p>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p><strong>Lectures:</strong> Drift and the coalescent: Coop chapt 4; <a href="https://www.nature.com/articles/ng.3036">Paper on Platypus</a></p>
-<p><strong>Exercises:</strong> <a href="https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/mapping_and_calling">Read mapping and base calling</a></p>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p><strong>Reading:</strong></p>
-<p><strong>Lectures:</strong> Past population demography, HMMs, ARG, <a href="https://www.nature.com/articles/nature10231">Paper on PSMC</a></p>
-<p><strong>Exercises:</strong> <a href="https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/demography">Estimating past population sizes</a></p>
-</div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p><strong>Lectures:</strong> Recombination, Phasing, HMMs, ARG, PSMC <a href="https://www.nature.com/articles/s41588-019-0484-x">Paper on tree inference</a>, <a href="https://www.nature.com/articles/s41576-020-0240-1">Review on recombination rate</a></p>
-<p><strong>Exercises:</strong> <a href="https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/phasing">Phasing and recombination</a></p>
-</div>
-<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
-<p><strong>Lectures:</strong> Population structure, Incomplete lineage sorting**, HMMs, Coop chapt 6, <a href="https://doi.org/10.1146/annurev-genet-120213-092532">Review on ILS</a></p>
-<p><strong>Exercises:</strong> <a href="https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/population_structure">Inference of population structure and admixture</a></p>
-</div>
-<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
-<p><strong>Lectures:</strong> Admixture, HMMs, <a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1007349">Review on admixture</a>, <a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1007641">Paper on admixture inference</a></p>
-<p><strong>Exercises:</strong> <a href="https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/tree_sequences">Tree sequences</a></p>
-</div>
-<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
-<p><strong>Lectures:</strong> Direct and linked selection, Coop chapt 12, 13, revisit <a href="https://www.nature.com/articles/s41588-019-0484-x">Paper on tree inference</a></p>
-<p><strong>Exercises:</strong> <a href="https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/selection">Inference of positive selection</a></p>
-</div>
-<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
-<p><strong>Lectures:</strong> Projects, Popgen overview <a href="https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Projects">Mandatory project description</a></p>
-<p><strong>Exercises:</strong> <a href="https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/GWAS_QC">GWAS quality control</a></p>
-</div>
-<div id="tabset-1-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-9-tab">
-<p><strong>Lectures:</strong> GWAS review, Population stratification review, Coop 99-120</p>
-<p><strong>Exercises:</strong> <a href="https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/GWAS_association">Association testing</a></p>
-</div>
-<div id="tabset-1-10" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-10-tab">
-<p><strong>Reading:</strong></p>
-<p><strong>Lectures:</strong> Heritability, <a href="https://dl.acm.org/doi/10.1145/2817827">Review on heritability and LMM</a> ; Coop Sec 2.2 (p23-36) + Chapt 7 (p119-142)</p>
-<p><strong>Exercises:</strong> <a href="https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/heritability">Estimating heritability</a></p>
-</div>
-<div id="tabset-1-11" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-11-tab">
-<p><strong>Lectures:</strong> Project</p>
-<p><strong>Exercises:</strong> Project</p>
-</div>
-<div id="tabset-1-12" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-12-tab">
-<p><strong>Lectures:</strong> Project</p>
-<p><strong>Exercises:</strong> SKÆRTORSDAG</p>
-</div>
-<div id="tabset-1-13" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-13-tab">
-<p><strong>Lectures:</strong> 2. PÅSKEDAG</p>
-<p><strong>Exercises:</strong> Project</p>
-</div>
-<div id="tabset-1-14" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-14-tab">
-<p><strong>Lectures:</strong> Project</p>
-<p><strong>Exercises:</strong> Project</p>
-<!-- Curriculum links -->
-<!-- https://brightspace.au.dk/d2l/common/viewFile.d2lfile/Content/L2NvbnRlbnQvZW5mb3JjZWQvMTY2Mjk3LUxSNDA2NTEvYXJnbmVlZGxlLnBkZg/argneedle.pdf?ou=166297 -->
-<!-- Exercise links -->
-<!-- Project links -->
-</div>
-</div>
-</div>
+<section id="exercise-contents" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-contents">Exercise contents:</h3>
+<p>We will estimate the amount of variance explained by the SNPs in a GWAS dataset. You can find the data here:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">~/populationgenomics/data/GWAS/GWAS_heritability/gwa.bim</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">~/populationgenomics/data/GWAS/GWAS_heritability/gwa.bed</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">~/populationgenomics/data/GWAS/GWAS_heritability/gwa.fam</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">~/populationgenomics/data/GWAS/GWAS_heritability/gwa.phen</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="student-presentations" class="level1 unnumbered">
-<h1 class="unnumbered">Student presentations</h1>
-<p>We begin each Monday lecture with two short student presentations. Sign up for three dates in this Google Sheet:</p>
-<p><a href="https://docs.google.com/spreadsheets/d/1t0UzO-aOj53uVPh39hG9EYR0AvrWdXj-uPFNdFWH660/edit?usp=sharing">Schedule for student presentations</a></p>
+<section id="calculating-the-genetic-relationship-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="calculating-the-genetic-relationship-matrix">Calculating the genetic relationship matrix</h3>
+<p>We will use plink to calculate the genetic relationship matrix (GRM) since it is faster than gcta. At the shell prompt, type:</p>
+<pre><code>plink --make-grm-gz --bfile gwa --out gwa</code></pre>
+<p>This will save the genetic relationship matrix in the zipped file gwa.grm.gz. Try to read it into R:</p>
+<pre><code>d &lt;- read.table(gzfile('gwa.grm.gz'))
+names(d) &lt;- c("sample1","sample2","variants","statistic")</code></pre>
+<p><em>1) If you exclude the lines where an individual is compared to itself (column 1 is equal to column 2) what is the highest value in the GRM then?</em></p>
+</section>
+<section id="estimating-variance-components" class="level3">
+<h3 class="anchored" data-anchor-id="estimating-variance-components">Estimating variance components</h3>
+<p>We’ll first need to install the package in our counda environments by running:</p>
+<pre><code>conda install -c bioconda gcta</code></pre>
+</section>
+<section id="estimating-variance-components-1" class="level3">
+<h3 class="anchored" data-anchor-id="estimating-variance-components-1">Estimating variance components</h3>
+<p>We can use gcta to estimate how much of the variance in the phenotype in gwa.phen is explained by the SNPs:</p>
+<pre><code>gcta64 --grm-gz gwa --pheno gwa.phen --reml --out test</code></pre>
+<p><em>2) How much of the phenotypic variance (Vp) is explained by the genetic variance (V(G))?</em></p>
+<p><em>3) Is this number larger or smaller than the narrow-sense heritability (h^2) of the trait?</em></p>
+</section>
+<section id="estimating-variance-components-for-groups-of-snps" class="level3">
+<h3 class="anchored" data-anchor-id="estimating-variance-components-for-groups-of-snps">Estimating variance components for groups of SNPs</h3>
+<p>The estimation of variance components can be used to answer questions about how much of the heritability is explained by different parts of the genome (for example different chromosomes or different functional annotations).</p>
+<p><em>4) How much of the phenotypic variance can be explained by the genetic variants on chromosome 6? (You can use the “–chr” flag in plink to build a GRM only using variants from a particular chromosome)</em></p>
+<p><em>5) Does chromosome 6 contribute more to the heritability than would be expected? How many of the genetic variants in the data set are located on chr 6? (you can use the genetic map in gwa.bim to see the location of the variants).</em></p>
 
 
 </section>
@@ -768,11 +736,11 @@ background: #003257;
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../../exercises/GWAS_association/README.html" class="pagination-link" aria-label="Association testing">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Association testing</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./about.html" class="pagination-link" aria-label="About">
-        <span class="nav-page-text">About</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
