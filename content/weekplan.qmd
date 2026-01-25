@@ -8,26 +8,7 @@ panels: true
 
 :::
 
-
-
-|----:|:------------------------------------------------------------------------------------------------------|:--------------------------------------------------|
-|   5 | **Course intro and overview**, Coop chapt 1, 2, 3, [Paper: Simons Genome Diversity Project]           | [Cluster practicals]                              |
-|   6 | **Drift and the coalescent**, Ancestral recombination graph (ARG), Coop chapt 4; [Paper on Platypus]  | [Read mapping and base calling]                   |
-|   7 | **Past population demography**, HMMs, ARG, [Paper on PSMC]                                            | [Estimating past population sizes]                |
-|   8 | **Recombination**, Phasing, HMMs, ARG, PSMC [Paper on tree inference], [Review on recombination rate] | [Phasing and recombination]                       |
-|   9 | **Population structure, Incomplete lineage sorting**, HMMs, Coop chapt 6, [Review on ILS]             | [Inference of population structure and admixture] |
-|  10 | **Admixture**, HMMs, [Review on admixture], [Paper on admixture inference]                            |                                                   |
-|  11 | **Tree sequences**                                                                                    | [Tree sequences]                                  |
-|  12 | **Direct and linked selection**, Coop chapt 12, 13, revisit [Paper on tree inference]                 | [Inference of positive selection]                 |
-|  13 | **Projects, Popgen overview**, [Mandatory project description]                                     | [GWAS quality control]                            |
-|  14 | **GWAS review**, Population stratification review, Coop 99-120 (No Exercise this week)                | [Association testing]                             |
-|  15 | **Heritability**, [Review on heritability and LMM] ; Coop Sec 2.2 (p23-36) + Chapt 7 (p119-142)               | [Estimating heritability]                         |
-|  16 | **Break**                                                                                             | **Break**                                             |
-|  17 | **Break**                                                                                             | **Special lecture: GWAS meets ARGs, Evolution and disease** Coop Sec. 11.0.1 (p217-221), [Paper on exploiting ARGs in GWAS]                            |
-|  18 | **Genomic pre-trained networks**                                                                      | Project guidance                                               |
-|  20 | **Chromatin structure and epigenetics**                                                               | Project guidance                                               |  
-
-
+[Schedule for student presentations](https://docs.google.com/spreadsheets/d/1t0UzO-aOj53uVPh39hG9EYR0AvrWdXj-uPFNdFWH660/edit?usp=sharing)
 
 ## Week 1 (5) {.unnumbered}
 

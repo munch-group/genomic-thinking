@@ -12,8 +12,6 @@ panels: true
 
 This is the homepage for the AU course Genomic Thinking. You will find all course content here. The [Brightspace course page][brightspace] is only used for communication, and assignments.
 
-
-
 # Schedule {.unnumbered}
 
 
@@ -23,5 +21,8 @@ This is the homepage for the AU course Genomic Thinking. You will find all cours
 
 :::
 
+# Student presentations {.unnumbered}
 
+We begin each Monday lecture with two short student presentations. Sign up for three dates in this Google Sheet:
 
+[Schedule for student presentations](https://docs.google.com/spreadsheets/d/1t0UzO-aOj53uVPh39hG9EYR0AvrWdXj-uPFNdFWH660/edit?usp=sharing)
