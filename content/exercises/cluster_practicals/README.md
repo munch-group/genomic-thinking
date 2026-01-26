@@ -21,62 +21,11 @@ Before we get to the cluster we need to get you properly set up on your own mach
 
 To get a terminal in vscode, press Ctrl+Shift+P (windows) / Cmd+Shift+P (Mac) to open the Command Palette. Then type "Create new terminal". You will see it auto-completes quite nicely. Select "Terminal: Create new terminal" and press Enter.
 
-<!-- ### Install Python
-
-If you have not done so already, you should install a distribution of Python called *Anaconda*. Anaconda is not only an easy way of installing Python on Windows, Mac, and Linux, it also comes with the conda package management system (see below). To install Anaconda, head to [this](https://www.anaconda.com/download). When the download has completed, you must follow default installation.
-
 ### The Terminal
 
-Most of the programs we will use in this course are command line applications. I.e. programs that are executed by writing their name and any arguments in a terminal rather than clicking on an icon and using a graphical user interface. There are many different programs that can serve as a terminal. If you have a Windows machine, you must use the *Anaconda Poweshell Prompt* (*not* the Anaconda Prompt and *not* the `CMD`). You installed Anaconda Powershell Prompt along with Anaconda Python. If you have a Mac, the terminal you will use is called *Terminal*. The Terminal application is pre-installed on Mac. So from now on, whenever we refer to the terminal, this means *Anaconda Poweshell Prompt* on Windows and *Terminal* on Mac. We will assume some familiarity with using a terminal and with executing commands on the command line. If you have not used a terminal before, or if you are a bit rusty, you should run through [this primer](https://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything) before you go on. -->
+Most of the programs we will use in this course are command line applications. I.e. programs that are executed by writing their name and any arguments in a terminal rather than clicking on an icon and using a graphical user interface. There are many different programs that can serve as a terminal. We will use the one that comes with VS code.
+You will need to know the basics on using a terminal and with executing commands on the command line. If you have not used a terminal before, or if you are a bit rusty, you should run through [this primer](https://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything) before you go on. -->
 
-<!-- 
-If you are rusty or unfamiliar with the terminal, you should do this small mini-exericse:
-
-1. Obtain the path to your home directory.
-2. Create a new directory in your home directory named "ClusterPracticals". 
-3. Write "This is a test" to a new file named "test_file_1" inside the directory "ClusterPracticals".
-4. Change the name of the file from "test_1" to "test_file_2".
-5. Make a copy of "test_file_2" named "test_file_3".
-6. Delete "test_file_3".
-7. Make a new directory named "test_directory_1". Delete "test_directory_1"
-8. Transfer "test_file_2" to your local machine.
-9. List the contents of "ClusterPracticals".
-10. Make a soft link of "test_file_2" inside "ClusterPracticals".
-11. See the contents of "test_file_2".
-12. Create a new file named "test_file_4". Write whatever you feel like. Concatenated "test_file_2" and "test_file_4" into a new file called "test_file_5". -->
-
-<!-- ### Conda environments
-
-You need to install packages and programs for use in your analyses and pipelines. Sometimes, however, the versions of packages you need for one project conflicts with the versions you need for other projects that you work on in parallel. Such conflicts seem like an unsolvable problem. Would it not be fantastic if you could create a small world, insulated from the rest of your Anaconda installation. Then that small world would only contain the packages you needed for a single project. If each project had its own isolated world, then there would be no such conflicts. Fortunately, there is a tool that lets you do just that, and its name is Conda. The small worlds that Conda creates are called "environments," and you can create as many as you like. You can then switch between them as you switch between your bioinformatics projects. Conda also downloads and installs the packages for you and it makes sure that the packages you install in each environment are compatible. It even makes sure that packages needed by packages (dependencies) are installed too.  By creating an enviromnet for each project, the libraries installed for each project do not interfere.
-
-### Create a conda environment on your own machine
-
-When you install Anaconda, conda makes a single base environment for you. It is called `base` and this is why it says "(base)" at your terminal prompt. For this course, you need a dedicated conda enviromnet for your exercises on both your local machine and on the cluster. Lets call both of them `popgen`.
-
-The environmnet on your local machine does not need a lot of packages since it mainly serves to let you connect to the cluster. This command creates a `popgen` enviromnet and installs `slurm-jupyter` from my conda channel along with a few other packages that may come in handy:
-
-```bash
-conda create --name popgen -c anaconda -c conda-forge -c plotly -c kaspermunch openssl slurm-jupyter jupyterlab notebook pandas ipympl nodejs ipython seaborn statsmodels popgen-dashboards
-```
-
-<!--
-```bash
-conda create --name popgen -c kaspermunch slurm-jupyter jupyter jupyterlab pandas numpy matplotlib ipympl nodejs seaborn scikit-learn statsmodels
-```
-
-It may take `conda` a while to create the environment, so be patient. Say yes (press Enter) when asked to install packages.
-
-**Important:** Whenever you use the terminal to do exercises, you should activate your `popgen` environment like this:
-
-```bash
-conda activate popgen
-```
-
-When the environment is active, it says `(popgen)` on the commnad prompt instead of `(base)`.
-
-### AU VPN
-
-To be able to connect to the cluster, you need to on the AU inernal network. You can do that by either physically being on campus, or by connecting to the AU network using VPN. To install VPN use the instructions [on this page](https://studerende.au.dk/it-support/vpn/). Before you can *use* the VPN, you need to also enable two-step verification. You can see how to do that on the same page. If you are not on physically on campus, you need to activate your VPN before you can log in to the cluster. Your password for VPN is the same as you use to log on to access Blackboard. -->
 
 ### Your home on the cluster
 
@@ -114,7 +63,7 @@ If you run the `hostname` command, you can see that you are on `fe-open-01`. Now
 
 You will need to log in to the cluster many many times, so you should set up your `ssh` connection to the cluster so you can connect securely without typing the password every time. You do not need to know *how* this works, but if you are interested, here is roughly how:
 
-> Firstly, you have to understand what public/private encryption keys are. A private key is a very long, random sequence of bits. A private key is kept secret and never leaves your own machine. A public key is another string of bits that is a derivative of the private key. You can generate a unique public key from the private key, but cannot get the private key from a public key: Is a one-way process. Using the public key, you can encrypt (or sign) any message, and it will only be possible to decrypt it using the private key. In other words, anyone with your public key can send you an encrypted messages that only you will be able to read. So, if the cluster has your public key saved, it can authenticate you like this: The cluster sends your machine a message that is encrypted using your public key. Your machine then decrypts the message using its private key and sends it back. If the cluster agrees it is decrypted correctly, it logs you in.
+> First, you need to know what public and private encryption keys are. A private key is a very long, random sequence of bits. A private key is kept secret and never leaves your own machine. A public key is another string of bits that is a derivative of the private key. You can generate a unique public key from the private key, but cannot get the private key from a public key: Is a one-way process. Using the public key, you can encrypt (or sign) any message, and it will only be possible to decrypt it using the private key. In other words, anyone with your public key can send you an encrypted messages that only you will be able to read. So, if the cluster has your public key saved, it can authenticate you like this: The cluster sends your machine a message that is encrypted using your public key. Your machine then decrypts the message using its private key and sends it back. If the cluster agrees it is decrypted correctly, it logs you in.
 
 First check if you have these two authentication files on your local machine (you can do so by running `ls -a ~/.ssh` in the terminal):
 
@@ -142,7 +91,7 @@ cat ~/.ssh/id_rsa.pub | ssh username@login.genome.au.dk 'cat >> .ssh/authorized_
 ```
 
 From now on you can log into the cluster from your local machine without being prompted for a password.
-<!-- 
+
 ## Setting up your home on the cluster
 
 Now log in to the cluster
@@ -153,24 +102,17 @@ ssh username@login.genome.au.dk
 
 (see, not password).
 
-### Install Python on your cluster account
+# VS code on the cluster
 
-You need to install miniconda (a minimal Anaconda version) in your cluster home dir. Log in to the cluster and run this command to download the miniconda install script:
+Now that you have this set up, you can use vscode to log in. To set this up, click the icon depicting four squares in the leftmost icon bar. In the panel that expands, use the top search field to search for "Remote Development" and install the extension pack. Once you have done that, you can click the bottom left corner with the two facing arrows and select "Connect to host..." or "Connect current window to host...", enter username@login.genome.au.dk and press enter. Once vscode has installed some extensions, you are logged in. Now you can open vscode in whatever folder you want. Open `populationgenomics/students/username`, which is your folder for the course exercises.
 
-```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-```
+### Install Pixi on your cluster account
 
-Then use this command to download and install miniconda:
+You need to the Pixi package manager to install the tools you need for each exercise. Log in to the cluster and install pixi by running this command in the vscode terminal:
 
 ```bash
-bash Miniconda3-latest-Linux-x86_64.sh
+curl -fsSL https://pixi.sh/install.sh | sh
 ```
-
-Follow the default installation, and say **yes** when it asks you if it should run `conda init` for you.
-
-**NP:** Now log out out of the cluster and log back in. This is needed to make the `conda` command available to you.
-
 
 ### Create an environment
 
@@ -180,69 +122,11 @@ You also need a dedicated conda environment on the cluster. We will name this `p
 Students need bcftools in the psmc exercise. For now, bcftools is installed in the software folder.
 So make this work: conda create -n popgen -c bioconda -c kaspermunch bwa platypus-variant samtools beagle plink admixture gnuplot vcftools bcftools
 Maybe also change exercises to only using bcftools and not samtools -->
-
-<!--> ```bash
+<!-- 
+```bash
 conda create -n popgen -c bioconda -c conda-forge -c kaspermunch bwa platypus-variant samtools beagle=4.1  plink admixture gnuplot vcftools --override-channels
-``` 
-
-```bash
-conda env create -f ~/populationgenomics/env/popgen.yml
-```
-
-It may take `conda` a while to create the environment, so be patient. Press enter when it says "Proceed ([y]/n)?". 
-
-**Important:** Whenever you log into the cluster to work on your project, you should activate your `popgen` environment like this:
-
-```bash
-conda activate popgen
-```
-
-When you environment is active it says `(popgen)` on the commnad prompt instead of `(base)`.
-
-### Set up Jupyter
-
-[Jupyter](https://jupyter.org/) is a notebook environment where you can easily combine text, code and plots. Using the [slurm-jupyter](https://slurm-jupyter.readthedocs.io/en/latest) tool, you can run a jupyter notebook on the cluster but see it in the browser on your own machine. That way your analysis runs on the cluster file system where your data is but the notebook interface is sent to your browser window. 
-
-The first thing you need to do is create a separate conda environment that has jupyter installed. Do not worry about this extra environment. You will not be using it directly. We just need it to be able to run jupyter notebooks in class. 
-
- ```bash
-conda create -n jupyter -c conda-forge -c bioconda -c kaspermunch slurm-jupyter popgen-dashboards jupyter jupyterlab ipyparallel pandas numpy matplotlib ipympl ipython ghostscript nodejs seaborn r-essentials rpy2 simplegeneric tzlocal r-vcfr bioconductor-biocinstaller bioconductor-snprelate r-biocmanager
-``` 
-
-```bash
-conda env create -f ~/populationgenomics/env/jupyter.yml
-```
-
-It may take `conda` a while to create the environment, so be patient. Press enter when it says "Proceed ([y]/n)?". Once created, you must activate that environemnt:
-
-```bash
-conda activate jupyter
-```
-
-and then run this this command:
-
-```bash
-config-slurm-jupyter.sh
-```
-
-That script will ask about a lot of information. You can just press enter for all of them **except** when prompted for what password you want to use: Then you must to type your cluster password.
-
-**Now log out of the cluster**. 
+```  
 -->
-
-<!-- ## Working on the the cluster
-
-If you followed each step above, you should now be all set up. Whenever you work on your own machine, you must activate the `popgen` conda environment. When you log into the cluster, you must activate it too. The easiest way to remember, is to make sure it always says `(popgen)` on you command prompt in the terminal.
-
-Now log in to the cluster and activate your `popgen` environemnt:
-
-```bash
-ssh usernmae@login.genome.au.dk
-conda activate popgen
-```
-(replace `username` with your cluster user name, you probably get the drift by now) -->
-
-
 
 ### Running interactive commands on the cluster
 
@@ -256,7 +140,6 @@ That says that you need at most one gigabyte of memory, that you need it for at 
 
 Now try to log out of the compute node by executing the `exit` command or by pressing `Ctrl-d`. If you execute the `hostname` command again you will get `fe1.genomedk.net` showing that you are back at the front-end mechine.
 
-<!-- 
 
 ### Running commands in the terminal
 
@@ -344,8 +227,10 @@ That is basically it.  -->
 
 ### How to copy files to and from the cluster
 
-You may need to transfer files back and forth between your own machine and the cluster. To copy a file called `file` in a directory called `dir` on the cluster to the current folder on your own machine, you can use the `scp` command:
+Once logged into the cluster wih vscode, you an right-click files in the file browser and select "Download". To upload files to the cluster folder, you can just drag them into the file browser.
 
+<!-- 
+You may need to transfer files back and forth between your own machine and the cluster. To copy a file called `file` in a directory called `dir` on the cluster to the current folder on your own machine, you can use the `scp` command:
 ```bash
 scp username@login.genome.au.dk:dir/file .
 ```
@@ -354,8 +239,10 @@ To copy a file called `file` in the current folder on your own machine to a fold
 
 ```bash
 scp ./file username@login.genome.au.dk:dir/
-```
+``` 
+-->
 
+<!-- 
 ### How to run a Jupyter notebook on the cluster
 
 Jupyter runs best in the [Chrome browser](https://www.google.com/chrome). For the best experience, install that before you go on. It does not need to be your default browser. `slurm-jupyter` will use it anyway. Now make sure you are on your own machine and that your `popgen` environment is activated. Then run this command to start a jupyter notebook on the cluster and send the display to your browser:
@@ -372,4 +259,5 @@ Watch the terminal to see what is going on. After a while a jupyter notebook sho
 
 Once ready, jupyter may ask for your cluster password. To close the jupyter notebook, press `Ctrl-c` in the terminal. Closing the browser window does **not** close down the jupyter on the cluster. You can [read this tutorial](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) to learn how to use a jupyter notebook.
 
+ -->
 
