@@ -10,21 +10,27 @@ panels: true
 
 [Schedule for student presentations](https://docs.google.com/spreadsheets/d/1t0UzO-aOj53uVPh39hG9EYR0AvrWdXj-uPFNdFWH660/edit?usp=sharing)
 
-## Week 1 (5) {.unnumbered}
+## 1 {.unnumbered}
+
+**Week 5**
 
 **Lectures:**  Course intro and overview: Coop chapt 1, 2, 3, [Paper: Simons Genome Diversity Project] 
 
 **Exercises:** [Cluster practicals] 
 
 
-## Week 2 (6) {.unnumbered}
+## 2 {.unnumbered}
+
+**Week 6**
 
 **Lectures:**  Drift and the coalescent: Coop chapt 4; [Paper on Platypus]
 
 **Exercises:** [Read mapping and base calling] 
 
 
-## Week 3 (7) {.unnumbered}
+## 3 {.unnumbered}
+
+**Week 7**
 
 **Reading:**  
 
@@ -33,49 +39,63 @@ panels: true
 **Exercises:** [Estimating past population sizes]
 
 
-## Week 4 (8) {.unnumbered}
+## 4 {.unnumbered}
+
+**Week 9**
 
 **Lectures:**  Recombination, Phasing, HMMs, ARG, PSMC [Paper on tree inference], [Review on recombination rate]
 
 **Exercises:** [Phasing and recombination] 
 
 
-## Week 5 (9) {.unnumbered}
+## 5 {.unnumbered}
+
+**Week 9**
 
 **Lectures:**  Population structure, Incomplete lineage sorting**, HMMs, Coop chapt 6, [Review on ILS] 
 
 **Exercises:** [Inference of population structure and admixture]
 
 
-## Week 6 (10) {.unnumbered}
+## 6 {.unnumbered}
+
+**Week 10**
 
 **Lectures:**  Admixture, HMMs, [Review on admixture], [Paper on admixture inference]  
 
 **Exercises:** [Tree sequences]
 
 
-## Week 7 (11) {.unnumbered}
+## 7 {.unnumbered}
+
+**Week 11**
 
 **Lectures:** Direct and linked selection, Coop chapt 12, 13, revisit [Paper on tree inference]  
 
 **Exercises:** [Inference of positive selection]  
 
 
-## Week 8 (12) {.unnumbered}
+## 8 {.unnumbered}
+
+**Week 12**
 
 **Lectures:**  Projects, Popgen overview  [Mandatory project description] 
 
 **Exercises:** [GWAS quality control] 
 
 
-## Week 9 (13) {.unnumbered}
+## 9 {.unnumbered}
+
+**Week 13**
 
 **Lectures:**  GWAS review, Population stratification review, Coop 99-120 
 
 **Exercises:** [Association testing] 
 
 
-## Week 10 (14) {.unnumbered}
+## 10 {.unnumbered}
+
+**Week 14**
 
 **Reading:**  
 
@@ -84,28 +104,36 @@ panels: true
 **Exercises:**  [Estimating heritability]
 
 
-## Week 11 (15) {.unnumbered}
+## 11 {.unnumbered}
+
+**Week 15**
 
 **Lectures:**  Project
 
 **Exercises:** Project
 
 
-## Week 12 (16) {.unnumbered}
+## 12 {.unnumbered}
+
+**Week 16**
 
 **Lectures:**  Project
 
 **Exercises:**    SKÆRTORSDAG
 
 
-## Week 13 (17) {.unnumbered}
+## 13 {.unnumbered}
+
+**Week 17**
 
 **Lectures:**  2. PÅSKEDAG
 
 **Exercises:** Project
 
 
-## Week 14 (18) {.unnumbered}
+## 14 {.unnumbered}
+
+**Week 18**
 
 **Lectures:**  Project
 
