@@ -77,7 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-6b2306b05fee0b85d8c2d824c36e28c3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-543a54f79cd3f3d0ed9955bcaf4df6c8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-7b6dd81834b739ce5ef7482f5ddde1ad.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -267,8 +267,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#vs-code-on-the-cluster" id="toc-vs-code-on-the-cluster" class="nav-link active" data-scroll-target="#vs-code-on-the-cluster"><span class="header-section-number">2</span> VS code on the cluster</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -310,97 +316,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The cluster is a very large collection of computers with a shared file system. Using a terminal, you can connect to the cluster from your own computer to run programs. Using other programs you can also create and edit files the same way you can on your own machine. The goal of this exercise is to make you familiar with the cluster and to get you set up to do the exercises in this course.</p>
 <section id="setting-up-your-own-machine" class="level2">
 <h2 class="anchored" data-anchor-id="setting-up-your-own-machine">Setting up your own machine</h2>
-<p>Before we get to the cluster we need to get you properly set up on your own machine.</p>
-<section id="install-python" class="level3">
-<h3 class="anchored" data-anchor-id="install-python">Install Python</h3>
-<p>If you have not done so already, you should install a distribution of Python called <em>Anaconda</em>. Anaconda is not only an easy way of installing Python on Windows, Mac, and Linux, it also comes with the conda package management system (see below). To install Anaconda, head to <a href="https://www.anaconda.com/download">this</a>. When the download has completed, you must follow default installation.</p>
-</section>
+<p>Before we get to the cluster we need to get you properly set up on your own machine. Install VS Code if you did not do so already. VS Code has both an editor and a terminal, and looks the same on Windows and Mac.</p>
+<p>To get a terminal in vscode, press Ctrl+Shift+P (windows) / Cmd+Shift+P (Mac) to open the Command Palette. Then type “Create new terminal”. You will see it auto-completes quite nicely. Select “Terminal: Create new terminal” and press Enter.</p>
 <section id="the-terminal" class="level3">
 <h3 class="anchored" data-anchor-id="the-terminal">The Terminal</h3>
-<p>Most of the programs we will use in this course are command line applications. I.e. programs that are executed by writing their name and any arguments in a terminal rather than clicking on an icon and using a graphical user interface. There are many different programs that can serve as a terminal. If you have a Windows machine, you must use the <em>Anaconda Poweshell Prompt</em> (<em>not</em> the Anaconda Prompt and <em>not</em> the <code>CMD</code>). You installed Anaconda Powershell Prompt along with Anaconda Python. If you have a Mac, the terminal you will use is called <em>Terminal</em>. The Terminal application is pre-installed on Mac. So from now on, whenever we refer to the terminal, this means <em>Anaconda Poweshell Prompt</em> on Windows and <em>Terminal</em> on Mac. We will assume some familiarity with using a terminal and with executing commands on the command line. If you have not used a terminal before, or if you are a bit rusty, you should run through <a href="https://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything">this primer</a> before you go on.</p>
-<!-- 
-If you are rusty or unfamiliar with the terminal, you should do this small mini-exericse:
-
-1. Obtain the path to your home directory.
-2. Create a new directory in your home directory named "ClusterPracticals". 
-3. Write "This is a test" to a new file named "test_file_1" inside the directory "ClusterPracticals".
-4. Change the name of the file from "test_1" to "test_file_2".
-5. Make a copy of "test_file_2" named "test_file_3".
-6. Delete "test_file_3".
-7. Make a new directory named "test_directory_1". Delete "test_directory_1"
-8. Transfer "test_file_2" to your local machine.
-9. List the contents of "ClusterPracticals".
-10. Make a soft link of "test_file_2" inside "ClusterPracticals".
-11. See the contents of "test_file_2".
-12. Create a new file named "test_file_4". Write whatever you feel like. Concatenated "test_file_2" and "test_file_4" into a new file called "test_file_5". -->
+<p>Most of the programs we will use in this course are command line applications. I.e. programs that are executed by writing their name and any arguments in a terminal rather than clicking on an icon and using a graphical user interface. There are many different programs that can serve as a terminal. We will use the one that comes with VS code. You will need to know the basics on using a terminal and with executing commands on the command line. If you have not used a terminal before, or if you are a bit rusty, you should run through <a href="https://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything">this primer</a> before you go on. –&gt;</p>
 </section>
-<section id="conda-environments" class="level3">
-<h3 class="anchored" data-anchor-id="conda-environments">Conda environments</h3>
-<p>You need to install packages and programs for use in your analyses and pipelines. Sometimes, however, the versions of packages you need for one project conflicts with the versions you need for other projects that you work on in parallel. Such conflicts seem like an unsolvable problem. Would it not be fantastic if you could create a small world, insulated from the rest of your Anaconda installation. Then that small world would only contain the packages you needed for a single project. If each project had its own isolated world, then there would be no such conflicts. Fortunately, there is a tool that lets you do just that, and its name is Conda. The small worlds that Conda creates are called “environments,” and you can create as many as you like. You can then switch between them as you switch between your bioinformatics projects. Conda also downloads and installs the packages for you and it makes sure that the packages you install in each environment are compatible. It even makes sure that packages needed by packages (dependencies) are installed too. By creating an enviromnet for each project, the libraries installed for each project do not interfere.</p>
-</section>
-<section id="create-a-conda-environment-on-your-own-machine" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-conda-environment-on-your-own-machine">Create a conda environment on your own machine</h3>
-<p>When you install Anaconda, conda makes a single base environment for you. It is called <code>base</code> and this is why it says “(base)” at your terminal prompt. For this course, you need a dedicated conda enviromnet for your exercises on both your local machine and on the cluster. Lets call both of them <code>popgen</code>.</p>
-<p>The environmnet on your local machine does not need a lot of packages since it mainly serves to let you connect to the cluster. This command creates a <code>popgen</code> enviromnet and installs <code>slurm-jupyter</code> from my conda channel along with a few other packages that may come in handy:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> popgen <span class="at">-c</span> anaconda <span class="at">-c</span> conda-forge <span class="at">-c</span> plotly <span class="at">-c</span> kaspermunch openssl slurm-jupyter jupyterlab notebook pandas ipympl nodejs ipython seaborn statsmodels popgen-dashboards</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<!--
-```bash
-conda create --name popgen -c kaspermunch slurm-jupyter jupyter jupyterlab pandas numpy matplotlib ipympl nodejs seaborn scikit-learn statsmodels
-```
---->
-<p>It may take <code>conda</code> a while to create the environment, so be patient. Say yes (press Enter) when asked to install packages.</p>
-<p><strong>Important:</strong> Whenever you use the terminal to do exercises, you should activate your <code>popgen</code> environment like this:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate popgen</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>When the environment is active, it says <code>(popgen)</code> on the commnad prompt instead of <code>(base)</code>.</p>
-</section>
-<section id="au-vpn" class="level3">
-<h3 class="anchored" data-anchor-id="au-vpn">AU VPN</h3>
-<p>To be able to connect to the cluster, you need to on the AU inernal network. You can do that by either physically being on campus, or by connecting to the AU network using VPN. To install VPN use the instructions <a href="https://studerende.au.dk/it-support/vpn/">on this page</a>. Before you can <em>use</em> the VPN, you need to also enable two-step verification. You can see how to do that on the same page. If you are not on phycally on campus, you need to activate your VPN before you can log in to the cluster. Your passworkd for VPN is the same as you use to log on to access Blackboard.</p>
+<section id="your-home-on-the-cluster" class="level3">
+<h3 class="anchored" data-anchor-id="your-home-on-the-cluster">Your home on the cluster</h3>
+<p>When you log into the cluster, you are put in your “home folder”. All users have a home folder. However, in this course you will not be using your home folder. We have made a special folder with the same name as your usename in the <code>populationgenomics/students</code> folder. You should keep everything related to the course in this folder. To get from your home folder to the this course folder you just <code>cd</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> populationgenomics/students/username</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>(replace <code>username</code> with your cluster user name)</p>
 </section>
 <section id="connecting-to-the-cluster" class="level3">
 <h3 class="anchored" data-anchor-id="connecting-to-the-cluster">Connecting to the cluster</h3>
 <p>You connect to the cluster from the terminal by executing this command (replace <code>username</code> with your cluster user name):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> username@login.genome.au.dk</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>When you do, you are promted for the password for your cluster username. Enter that and press enter. You are now in your home folder on the cluster. Your terminal looks the same as before but it will print:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> username@login.genome.au.dk</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>When you do, you are prompted for the password for your cluster username. Enter that and press enter. You are now in your home folder on the cluster. Your terminal looks the same as before but it will print:</p>
 <pre><code>  _____                                ______ _   __
  |  __ \                               |  _  \ | / /
  | |  \/ ___ _ __   ___  _ __ ___   ___| | | | |/ /
  | | __ / _ \ '_ \ / _ \| '_ ` _ \ / _ \ | | |    \
  | |_\ \  __/ | | | (_) | | | | | |  __/ |/ /| |\  \
   \____/\___|_| |_|\___/|_| |_| |_|\___|___/ \_| \_/</code></pre>
-<p>If you run the <code>hostname</code> command, you can see that you are on <code>fe1.genomedk.net</code>. Now log out of the cluster again. You do that using <code>exit</code> commannd or by presssing <code>Ctrl-d</code>. Now you are back on your own machine. Try <code>hostname</code> again and see what your own machine is called.</p>
+<p>If you run the <code>hostname</code> command, you can see that you are on <code>fe-open-01</code>. Now log out of the cluster again. You do that using <code>exit</code> command or by pressing <code>Ctrl-d</code>. Now you are back on your own machine. Try <code>hostname</code> again and see what your own machine is called.</p>
 </section>
 <section id="allow-login-without-password" class="level3">
 <h3 class="anchored" data-anchor-id="allow-login-without-password">Allow login without password</h3>
 <p>You will need to log in to the cluster many many times, so you should set up your <code>ssh</code> connection to the cluster so you can connect securely without typing the password every time. You do not need to know <em>how</em> this works, but if you are interested, here is roughly how:</p>
 <blockquote class="blockquote">
-<p>Firstly, you have to understand what public/private encryption keys are. A private key is a very long, random sequence of bits. A private key is kept secret and never leaves your own machine. A public key is another string of bits that is a derivative of the private key. You can generate a unique public key from the private key, but cannot get the private key from a public key: Is a one-way process. Using the public key, you can encrypt (or sign) any message, and it will only be possible to decrypt it using the private key. In other words, anyone with your public key can send you an encrypted messages that only you will be able to read. So, if the cluster has your public key saved, it can authenticate you like this: The cluster sends your machine a message that is encrypted using your public key. Your machine then decrypts the message using its private key and sends it back. If the cluster agrees it is decrypted correctly, it logs you in.</p>
+<p>First, you need to know what public and private encryption keys are. A private key is a very long, random sequence of bits. A private key is kept secret and never leaves your own machine. A public key is another string of bits that is a derivative of the private key. You can generate a unique public key from the private key, but cannot get the private key from a public key: Is a one-way process. Using the public key, you can encrypt (or sign) any message, and it will only be possible to decrypt it using the private key. In other words, anyone with your public key can send you an encrypted messages that only you will be able to read. So, if the cluster has your public key saved, it can authenticate you like this: The cluster sends your machine a message that is encrypted using your public key. Your machine then decrypts the message using its private key and sends it back. If the cluster agrees it is decrypted correctly, it logs you in.</p>
 </blockquote>
 <p>First check if you have these two authentication files on your local machine (you can do so by running <code>ls -a ~/.ssh</code> in the terminal):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">~/.ssh/id_rsa</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">~/.ssh/id_rsa.pub</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">~/.ssh/id_rsa</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">~/.ssh/id_rsa.pub</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You most likely do not. If so, you generate a pair of authentication keys with the command below. Just press Enter when asked “Enter file in which to save the key”. Do not enter a passphrase when prompted - just press enter:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> rsa</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> rsa</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now use <code>ssh</code> to create a directory <code>~/.ssh</code> on the cluster (assuming your username on the cluster is <code>username</code>). You will be prompted for your password.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> username@login.genome.au.dk mkdir <span class="at">-p</span> .ssh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> username@login.genome.au.dk mkdir <span class="at">-p</span> .ssh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Finally, append the public <code>ssh</code> key on your local machine to the file <code>.ssh/authorized_keys</code> on the cluster and enter your password (replace <code>username</code> with your cluster user name):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_rsa.pub <span class="kw">|</span> <span class="fu">ssh</span> username@login.genome.au.dk <span class="st">'cat &gt;&gt; .ssh/authorized_keys'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_rsa.pub <span class="kw">|</span> <span class="fu">ssh</span> username@login.genome.au.dk <span class="st">'cat &gt;&gt; .ssh/authorized_keys'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>From now on you can log into the cluster from your local machine without being prompted for a password.</p>
 </section>
 </section>
 <section id="setting-up-your-home-on-the-cluster" class="level2">
 <h2 class="anchored" data-anchor-id="setting-up-your-home-on-the-cluster">Setting up your home on the cluster</h2>
 <p>Now log in to the cluster</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> username@login.genome.au.dk</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> username@login.genome.au.dk</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>(see, not password).</p>
-<section id="install-python-on-your-cluster-account" class="level3">
-<h3 class="anchored" data-anchor-id="install-python-on-your-cluster-account">Install Python on your cluster account</h3>
-<p>You need to install miniconda (a minimal Anaconda version) in your cluster home dir. Log in to the cluster and run this command to download the miniconda install script:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Then use this command to download and install miniconda:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> Miniconda3-latest-Linux-x86_64.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Follow the default installation, and say <strong>yes</strong> when it asks you if it should run <code>conda init</code> for you.</p>
-<p><strong>NP:</strong> Now log out out of the cluster and log back in. This is needed to make the <code>conda</code> command available to you.</p>
+</section>
+<section id="vs-code-on-the-cluster" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> VS code on the cluster</h1>
+<p>Now that you have this set up, you can use vscode to log in. To set this up, click the icon depicting four squares in the leftmost icon bar. In the panel that expands, use the top search field to search for “Remote Development” and install the extension pack. Once you have done that, you can click the bottom left corner with the two facing arrows and select “Connect to host…” or “Connect current window to host…”, enter username@login.genome.au.dk and press enter. Once vscode has installed some extensions, you are logged in. Now you can open vscode in whatever folder you want. Open <code>populationgenomics/students/username</code>, which is your folder for the course exercises.</p>
+<section id="install-pixi-on-your-cluster-account" class="level3">
+<h3 class="anchored" data-anchor-id="install-pixi-on-your-cluster-account">Install Pixi on your cluster account</h3>
+<p>You need to the Pixi package manager to install the tools you need for each exercise. Log in to the cluster and install pixi by running this command in the vscode terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://pixi.sh/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="create-an-environment" class="level3">
 <h3 class="anchored" data-anchor-id="create-an-environment">Create an environment</h3>
@@ -409,75 +380,31 @@ conda create --name popgen -c kaspermunch slurm-jupyter jupyter jupyterlab panda
 Students need bcftools in the psmc exercise. For now, bcftools is installed in the software folder.
 So make this work: conda create -n popgen -c bioconda -c kaspermunch bwa platypus-variant samtools beagle plink admixture gnuplot vcftools bcftools
 Maybe also change exercises to only using bcftools and not samtools -->
-<!-- ```bash
+<!-- 
+```bash
 conda create -n popgen -c bioconda -c conda-forge -c kaspermunch bwa platypus-variant samtools beagle=4.1  plink admixture gnuplot vcftools --override-channels
-``` -->
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> ~/populationgenomics/env/popgen.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>It may take <code>conda</code> a while to create the environment, so be patient. Press enter when it says “Proceed ([y]/n)?”.</p>
-<p><strong>Important:</strong> Whenever you log into the cluster to work on your project, you should activate your <code>popgen</code> environment like this:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate popgen</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>When you environment is active it says <code>(popgen)</code> on the commnad prompt instead of <code>(base)</code>.</p>
-</section>
-<section id="set-up-jupyter" class="level3">
-<h3 class="anchored" data-anchor-id="set-up-jupyter">Set up Jupyter</h3>
-<p><a href="https://jupyter.org/">Jupyter</a> is a notebook environment where you can easily combine text, code and plots. Using the <a href="https://slurm-jupyter.readthedocs.io/en/latest">slurm-jupyter</a> tool, you can run a jupyter notebook on the cluster but see it in the browser on your own machine. That way your analysis runs on the cluster file system where your data is but the notebook interface is sent to your browser window.</p>
-<p>The first thing you need to do is create a separate conda environment that has jupyter installed. Do not worry about this extra environment. You will not be using it directly. We just need it to be able to run jupyter notebooks in class.</p>
-<!-- ```bash
-conda create -n jupyter -c conda-forge -c bioconda -c kaspermunch slurm-jupyter popgen-dashboards jupyter jupyterlab ipyparallel pandas numpy matplotlib ipympl ipython ghostscript nodejs seaborn r-essentials rpy2 simplegeneric tzlocal r-vcfr bioconductor-biocinstaller bioconductor-snprelate r-biocmanager
-``` -->
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> ~/populationgenomics/env/jupyter.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>It may take <code>conda</code> a while to create the environment, so be patient. Press enter when it says “Proceed ([y]/n)?”. Once created, you must activate that environemnt:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate jupyter</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>and then run this this command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">config-slurm-jupyter.sh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>That script will ask about a lot of information. You can just press enter for all of them <strong>except</strong> when prompted for what password you want to use: Then you must to type your cluster password.</p>
-<p><strong>Now log out of the cluster</strong>.</p>
-</section>
-</section>
-<section id="working-on-the-the-cluster" class="level2">
-<h2 class="anchored" data-anchor-id="working-on-the-the-cluster">Working on the the cluster</h2>
-<p>If you followed each step above, you should now be all set up. Whenever you work on your own machine, you must activate the <code>popgen</code> conda environment. When you log into the cluster, you must activate it too. The easiest way to remember, is to make sure it always says <code>(popgen)</code> on you command prompt in the terminal.</p>
-<p>Now log in to the cluster and activate your <code>popgen</code> environemnt:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> usernmae@login.genome.au.dk</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate popgen</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>(replace <code>username</code> with your cluster user name, you probably get the drift by now)</p>
-<section id="your-home-on-the-cluster" class="level3">
-<h3 class="anchored" data-anchor-id="your-home-on-the-cluster">Your home on the cluster</h3>
-<p>When you log into the cluster, you are put in your “home folder”. All users have a home folder. However, in this course you will not be using your home folder. We have made a special folder with the same name as your usename in the <code>populationgenomics/students</code> folder. You should keep everything related to the course in this folder. To get from your home folder to the this course folder you just <code>cd</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> populationgenomics/students/username</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>(replace <code>username</code> with your cluster user name)</p>
+```  
+-->
 </section>
 <section id="running-interactive-commands-on-the-cluster" class="level3">
 <h3 class="anchored" data-anchor-id="running-interactive-commands-on-the-cluster">Running interactive commands on the cluster</h3>
-<p>When you log into the cluster you land on the “front-end” of the cluster. Think of it as the lobby of a giant hotel. If you execute the <code>hostname</code> command you will get <code>fe1.genomedk.net</code>. <code>fe1</code> is the name of the front-end machine. The “front-end” is a single machine shared by anyone who log in. So you cannot run resource intensive jobs there but quick commands are ok. Commands that finish in less than ten seconds are ok. In the exercises for this course, you will run software that takes much longer time to finish. So you need one of the computing machines on the cluster, so you can work on that instead. You ask for a computing machine by running this command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="at">--mem-per-cpu</span><span class="op">=</span>1g <span class="at">--time</span><span class="op">=</span>3:00:00 <span class="at">--account</span><span class="op">=</span>populationgenomics <span class="at">--pty</span> bash</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>That says that you need at most one gigabyte of memory, that you need it for at most three hours (the duration of the exercise), and that the computing expensenses should be billed to the project <code>populationgenomics</code> (which is our course). When you execute the command, your terminal will say “srun: job 40924828 queued and waiting for resources”. That means that you are waiting for a machine. Once it prints “srun: job 40924828 has been allocated resources”, you have been logged into a computing node. If you execute the <code>hostname</code> command, you will get something like <code>s05n20.genomedk.net</code>. <code>s05n20</code> is a computing mechine. Now you can execute any command you like without causing trouble for anyone.</p>
+<p>When you connect to the cluster using vscode and open a terminal you are on the “front-end” of the cluster. Think of it as the lobby of a giant hotel. If you execute the <code>hostname</code> command you will get <code>fe-open-01</code>. <code>fe</code> is the name of the front-end machine. The “front-end” is a single machine shared by anyone who log in. So you cannot run resource intensive jobs there but quick commands are ok. Commands that finish in less than ten seconds are ok. In the exercises for this course, you will run software that takes much longer time to finish. So you need one of the computing machines on the cluster, so you can work on that instead. You ask for a computing machine by running this command:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="at">--mem-per-cpu</span><span class="op">=</span>1g <span class="at">--time</span><span class="op">=</span>3:00:00 <span class="at">--account</span><span class="op">=</span>populationgenomics <span class="at">--pty</span> bash</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>That says that you need at most one gigabyte of memory, that you need it for at most three hours (the duration of the exercise), and that the computing expenses should be billed to the project <code>populationgenomics</code> (which is our course). When you execute the command, your terminal will say “srun: job 40924828 queued and waiting for resources”. That means that you are waiting for a machine. Once it prints “srun: job 40924828 has been allocated resources”, you have been logged into a computing node. If you execute the <code>hostname</code> command, you will get something like <code>s05n20.genomedk.net</code>. <code>s05n20</code> is a computing mechine. Now you can execute any command you like without causing trouble for anyone.</p>
 <p>Now try to log out of the compute node by executing the <code>exit</code> command or by pressing <code>Ctrl-d</code>. If you execute the <code>hostname</code> command again you will get <code>fe1.genomedk.net</code> showing that you are back at the front-end mechine.</p>
-<!-- 
-
-### Running commands in the terminal
-
-When you log into the cluster you land on the "front-end" of the cluster. The "front-end" is a single machine shared by anyone who log in. You cannot run resource intensive jobs there, but quick commands are ok. Commands that finish in less than ten secons are ok. Try this command that prints "echos" the string "I can run interactive commands!" to the file `nice.txt`:
-
-```bash
-echo "I can run interactive commands!" > nice.txt
-```
-
-Use the `cat` command to show the contents of `nice.txt` in the terminal:
-
-```bash
-cat nice.txt
-```
-
-### Running interactive commands on the cluster
-
-Say the command above was a long-running command like some population genomic analysis. Then you cannot run it on the front-end. You need to ask for one of the computing machines on the cluster so you can work on that instead. You do that by running this command:
-
-```bash
-srun --mem-per-cpu=1g --time=3:00:00 --account=populationgenomics --pty bash
-```
-
-Thay way you will use at most one gigabyte of memory, that you need at most three hours (the duration of the exercise), and that the computing expensenses should be billed to the project populationgenomics (which is our course). When you execute the command your terminal will say "srun: job 40924828 queued and waiting for resources". That means that you have asked for a machine. Once it prints "srun: job 40924828 has been allocated resources", you have been logged into a computing node. If you execute the `hostname` command you will get something like `s05n20.genomedk.net`. `s05n20` is a computing mechine. Now you can execute any command you like without causing trouble for anyone. Now try to log out of the compute node by executing the `exit` command or by pressing `Ctrl-d`. If you execute the `hostname` command again you will get `fe1.genomedk.net`. `fe1` is the front-end. -->
+</section>
+<section id="running-commands-in-the-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="running-commands-in-the-terminal">Running commands in the terminal</h3>
+<p>When you log into the cluster you land on the “front-end” of the cluster. The “front-end” is a single machine shared by anyone who log in. You cannot run resource intensive jobs there, but quick commands are ok. Commands that finish in less than ten secons are ok. Try this command that prints “echos” the string “I can run interactive commands!” to the file <code>nice.txt</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"I can run interactive commands!"</span> <span class="op">&gt;</span> nice.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use the <code>cat</code> command to show the contents of <code>nice.txt</code> in the terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> nice.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="running-interactive-commands-on-the-cluster-1" class="level3">
+<h3 class="anchored" data-anchor-id="running-interactive-commands-on-the-cluster-1">Running interactive commands on the cluster</h3>
+<p>Say the command above was a long-running command like some population genomic analysis. Then you cannot run it on the front-end. You need to ask for one of the computing machines on the cluster so you can work on that instead. You do that by running this command:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="at">--mem-per-cpu</span><span class="op">=</span>1g <span class="at">--time</span><span class="op">=</span>3:00:00 <span class="at">--account</span><span class="op">=</span>populationgenomics <span class="at">--pty</span> bash</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Thay way you will use at most one gigabyte of memory, that you need at most three hours (the duration of the exercise), and that the computing expensenses should be billed to the project populationgenomics (which is our course). When you execute the command your terminal will say “srun: job 40924828 queued and waiting for resources”. That means that you have asked for a machine. Once it prints “srun: job 40924828 has been allocated resources”, you have been logged into a computing node. If you execute the <code>hostname</code> command you will get something like <code>s05n20.genomedk.net</code>. <code>s05n20</code> is a computing mechine. Now you can execute any command you like without causing trouble for anyone. Now try to log out of the compute node by executing the <code>exit</code> command or by pressing <code>Ctrl-d</code>. If you execute the <code>hostname</code> command again you will get <code>fe1.genomedk.net</code>. <code>fe1</code> is the front-end. –&gt;</p>
 <!-- 
 ### Queueing commands on the cluster
 
@@ -540,19 +467,40 @@ That is basically it.  -->
 </section>
 <section id="how-to-copy-files-to-and-from-the-cluster" class="level3">
 <h3 class="anchored" data-anchor-id="how-to-copy-files-to-and-from-the-cluster">How to copy files to and from the cluster</h3>
-<p>You may need to transfer files back and forth between your own machine and the cluster. To copy a file called <code>file</code> in a directory called <code>dir</code> on the cluster to the current folder on your own machine, you can use the <code>scp</code> command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> username@login.genome.au.dk:dir/file .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>To copy a file called <code>file</code> in the current folder on your own machine to a folder called <code>dir</code> on the cluster, you do this:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> ./file username@login.genome.au.dk:dir/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Once logged into the cluster wih vscode, you an right-click files in the file browser and select “Download”. To upload files to the cluster folder, you can just drag them into the file browser.</p>
+<!-- 
+You may need to transfer files back and forth between your own machine and the cluster. To copy a file called `file` in a directory called `dir` on the cluster to the current folder on your own machine, you can use the `scp` command:
+```bash
+scp username@login.genome.au.dk:dir/file .
+```
+
+To copy a file called `file` in the current folder on your own machine to a folder called `dir` on the cluster, you do this:
+
+```bash
+scp ./file username@login.genome.au.dk:dir/
+``` 
+-->
+<!-- 
+### How to run a Jupyter notebook on the cluster
+
+Jupyter runs best in the [Chrome browser](https://www.google.com/chrome). For the best experience, install that before you go on. It does not need to be your default browser. `slurm-jupyter` will use it anyway. Now make sure you are on your own machine and that your `popgen` environment is activated. Then run this command to start a jupyter notebook on the cluster and send the display to your browser:
+
+```bash
+slurm-jupyter -u usernanme -A populationgenomics -e jupyter -m 1g -t 3h --run notebook
+```
+
+(replace `username` with your cluster user name)
+
+Watch the terminal to see what is going on. After a while a jupyter notebook should show up in your browser window. The first time you do this, your browser may refuse to show jupyter because the connection is unsafe. In Safari you proceed to allow this. In Chrome, you can simply type the characters "thisisunsafe" while in the Chrome window:
+
+<img src="img/thisisunsafe.png" alt="image" width="450"/>
+
+Once ready, jupyter may ask for your cluster password. To close the jupyter notebook, press `Ctrl-c` in the terminal. Closing the browser window does **not** close down the jupyter on the cluster. You can [read this tutorial](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) to learn how to use a jupyter notebook.
+
+ -->
 </section>
-<section id="how-to-run-a-jupyter-notebook-on-the-cluster" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-run-a-jupyter-notebook-on-the-cluster">How to run a Jupyter notebook on the cluster</h3>
-<p>Jupyter runs best in the <a href="https://www.google.com/chrome">Chrome browser</a>. For the best experience, install that before you go on. It does not need to be your default browser. <code>slurm-jupyter</code> will use it anyway. Now make sure you are on your own machine and that your <code>popgen</code> environment is activated. Then run this command to start a jupyter notebook on the cluster and send the display to your browser:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">slurm-jupyter</span> <span class="at">-u</span> usernanme <span class="at">-A</span> populationgenomics <span class="at">-e</span> jupyter <span class="at">-m</span> 1g <span class="at">-t</span> 3h <span class="at">--run</span> notebook</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>(replace <code>username</code> with your cluster user name)</p>
-<p>Watch the terminal to see what is going on. After a while a jupyter notebook should show up in your browser window. The first time you do this, your browser may refuse to show jupyter because the connection is unsafe. In Safari you proceed to allow this. In Chrome, you can simply type the characters “thisisunsafe” while in the Chrome window:</p>
-<p><img src="img/thisisunsafe.png" alt="image" width="450"></p>
-<p>Once ready, jupyter may ask for your cluster password. To close the jupyter notebook, press <code>Ctrl-c</code> in the terminal. Closing the browser window does <strong>not</strong> close down the jupyter on the cluster. You can <a href="https://www.dataquest.io/blog/jupyter-notebook-tutorial/">read this tutorial</a> to learn how to use a jupyter notebook.</p>
+<section id="testing-your-setup" class="level2">
+<h2 class="anchored" data-anchor-id="testing-your-setup">Testing your setup</h2>
 
 
 </section>
