@@ -14,27 +14,27 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Course description\nAfter the course, the participants will have basic knowledge of computer methods and applications for analyzing biological sequence data and insight into principles and techniques for constructing simple programs. Participants will acquire practical experience with analyzing problems in bioinformatics and related fields and implementing programs to solve such problems using the Python programming language.\nThe participants must, at the end of the course, be able to:",
+    "text": "Course content\nThis course introduces key concepts in population genomics, from generating population genetic data sets to the most common population genetic analyses and association studies. The first part focuses on the generation of population genetic data sets. The rest of the course introduces methods for full genome population genetic analysis and their theoretical background. Course topics include analysis of demography, population structure, recombination, selection, and genome-wide association with human health and disease. Description of qualifications",
     "crumbs": [
       "About"
     ]
   },
   {
-    "objectID": "about.html#course-description",
-    "href": "about.html#course-description",
+    "objectID": "about.html#objectives-of-the-course",
+    "href": "about.html#objectives-of-the-course",
     "title": "About",
-    "section": "",
-    "text": "Apply fundamental constructs of a programming language.\nAnalyse data and construct data structures for the representation of data.\nAnalyse simple computational problems and construct programs for their solution.\nDescribe and relate essential methods in bioinformatics analysis.\nApply bioinformatics software to biological data.\nJudge the reliability of results obtained using Bioinformatics software.",
+    "section": "Objectives of the course",
+    "text": "Objectives of the course\nThe participants will after the course have detailed knowledge of the methods and applications required to perform a typical population genomic study.",
     "crumbs": [
       "About"
     ]
   },
   {
-    "objectID": "about.html#course-contents",
-    "href": "about.html#course-contents",
+    "objectID": "about.html#learning-outcomes-and-competences",
+    "href": "about.html#learning-outcomes-and-competences",
     "title": "About",
-    "section": "Course contents",
-    "text": "Course contents\nThe course introduces programming and its practical applications in bioinformatics. The course also outlines and discusses bioinformatics algorithms, and the most common tools for bioinformatics analysis of sequence data are presented and demo nstrated. The participant will acquire and train basic programming skills during the first seven weeks. The last seven weeks introduce key topics in bioinformatics, focusing on applying bioinformatical software and developing programming skills. Subjects for lectures and exercises include bioinformatics databases, sequence alignment, genome annotation, sequence evolution, and phylogenetic analysis.",
+    "section": "Learning outcomes and competences",
+    "text": "Learning outcomes and competences\nThe participants must at the end of the course be able to:\n\nIdentify an experimental platform relevant to a population genomic analysis\nApply commonly used population genomic methods\nExplain the theory behind common population genomic methods\nReflect on strengths and limitations of population genomic methods\nInterpret and analyze results of population genomic inference\nFormulate population genetics hypotheses based on data.",
     "crumbs": [
       "About"
     ]
