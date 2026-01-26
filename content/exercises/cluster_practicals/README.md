@@ -261,3 +261,5 @@ Once ready, jupyter may ask for your cluster password. To close the jupyter note
 
  -->
 
+## Testing your setup
+
