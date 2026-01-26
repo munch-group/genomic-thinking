@@ -17,15 +17,17 @@ The cluster is a very large collection of computers with a shared file system. U
 
 ## Setting up your own machine
 
-Before we get to the cluster we need to get you properly set up on your own machine.
+Before we get to the cluster we need to get you properly set up on your own machine. Install VS Code if you did not do so already. VS Code has both an editor and a terminal, and looks the same on Windows and Mac.
 
-### Install Python
+To get a terminal in vscode, press Ctrl+Shift+P (windows) / Cmd+Shift+P (Mac) to open the Command Palette. Then type "Create new terminal". You will see it auto-completes quite nicely. Select "Terminal: Create new terminal" and press Enter.
+
+<!-- ### Install Python
 
 If you have not done so already, you should install a distribution of Python called *Anaconda*. Anaconda is not only an easy way of installing Python on Windows, Mac, and Linux, it also comes with the conda package management system (see below). To install Anaconda, head to [this](https://www.anaconda.com/download). When the download has completed, you must follow default installation.
 
 ### The Terminal
 
-Most of the programs we will use in this course are command line applications. I.e. programs that are executed by writing their name and any arguments in a terminal rather than clicking on an icon and using a graphical user interface. There are many different programs that can serve as a terminal. If you have a Windows machine, you must use the *Anaconda Poweshell Prompt* (*not* the Anaconda Prompt and *not* the `CMD`). You installed Anaconda Powershell Prompt along with Anaconda Python. If you have a Mac, the terminal you will use is called *Terminal*. The Terminal application is pre-installed on Mac. So from now on, whenever we refer to the terminal, this means *Anaconda Poweshell Prompt* on Windows and *Terminal* on Mac. We will assume some familiarity with using a terminal and with executing commands on the command line. If you have not used a terminal before, or if you are a bit rusty, you should run through [this primer](https://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything) before you go on.
+Most of the programs we will use in this course are command line applications. I.e. programs that are executed by writing their name and any arguments in a terminal rather than clicking on an icon and using a graphical user interface. There are many different programs that can serve as a terminal. If you have a Windows machine, you must use the *Anaconda Poweshell Prompt* (*not* the Anaconda Prompt and *not* the `CMD`). You installed Anaconda Powershell Prompt along with Anaconda Python. If you have a Mac, the terminal you will use is called *Terminal*. The Terminal application is pre-installed on Mac. So from now on, whenever we refer to the terminal, this means *Anaconda Poweshell Prompt* on Windows and *Terminal* on Mac. We will assume some familiarity with using a terminal and with executing commands on the command line. If you have not used a terminal before, or if you are a bit rusty, you should run through [this primer](https://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything) before you go on. -->
 
 <!-- 
 If you are rusty or unfamiliar with the terminal, you should do this small mini-exericse:
@@ -43,7 +45,7 @@ If you are rusty or unfamiliar with the terminal, you should do this small mini-
 11. See the contents of "test_file_2".
 12. Create a new file named "test_file_4". Write whatever you feel like. Concatenated "test_file_2" and "test_file_4" into a new file called "test_file_5". -->
 
-### Conda environments
+<!-- ### Conda environments
 
 You need to install packages and programs for use in your analyses and pipelines. Sometimes, however, the versions of packages you need for one project conflicts with the versions you need for other projects that you work on in parallel. Such conflicts seem like an unsolvable problem. Would it not be fantastic if you could create a small world, insulated from the rest of your Anaconda installation. Then that small world would only contain the packages you needed for a single project. If each project had its own isolated world, then there would be no such conflicts. Fortunately, there is a tool that lets you do just that, and its name is Conda. The small worlds that Conda creates are called "environments," and you can create as many as you like. You can then switch between them as you switch between your bioinformatics projects. Conda also downloads and installs the packages for you and it makes sure that the packages you install in each environment are compatible. It even makes sure that packages needed by packages (dependencies) are installed too.  By creating an enviromnet for each project, the libraries installed for each project do not interfere.
 
@@ -61,7 +63,6 @@ conda create --name popgen -c anaconda -c conda-forge -c plotly -c kaspermunch o
 ```bash
 conda create --name popgen -c kaspermunch slurm-jupyter jupyter jupyterlab pandas numpy matplotlib ipympl nodejs seaborn scikit-learn statsmodels
 ```
---->
 
 It may take `conda` a while to create the environment, so be patient. Say yes (press Enter) when asked to install packages.
 
@@ -75,7 +76,17 @@ When the environment is active, it says `(popgen)` on the commnad prompt instead
 
 ### AU VPN
 
-To be able to connect to the cluster, you need to on the AU inernal network. You can do that by either physically being on campus, or by connecting to the AU network using VPN. To install VPN use the instructions [on this page](https://studerende.au.dk/it-support/vpn/). Before you can *use* the VPN, you need to also enable two-step verification. You can see how to do that on the same page. If you are not on phycally on campus, you need to activate your VPN before you can log in to the cluster. Your passworkd for VPN is the same as you use to log on to access Blackboard.
+To be able to connect to the cluster, you need to on the AU inernal network. You can do that by either physically being on campus, or by connecting to the AU network using VPN. To install VPN use the instructions [on this page](https://studerende.au.dk/it-support/vpn/). Before you can *use* the VPN, you need to also enable two-step verification. You can see how to do that on the same page. If you are not on physically on campus, you need to activate your VPN before you can log in to the cluster. Your password for VPN is the same as you use to log on to access Blackboard. -->
+
+### Your home on the cluster
+
+When you log into the cluster, you are put in your "home folder". All users have a home folder. However, in this course you will not be using your home folder. We have made a special folder with the same name as your usename in the `populationgenomics/students` folder. You should keep everything related to the course in this folder. To get from your home folder to the this course folder you just `cd`:
+
+```bash
+cd populationgenomics/students/username
+```
+
+(replace `username` with your cluster user name)
 
 ### Connecting to the cluster
 
@@ -85,7 +96,7 @@ You connect to the cluster from the terminal by executing this command (replace 
 ssh username@login.genome.au.dk
 ```
 
-When you do, you are promted for the password for your cluster username. Enter that and press enter. You are now in your home folder on the cluster. Your terminal looks the same as before but it will print:
+When you do, you are prompted for the password for your cluster username. Enter that and press enter. You are now in your home folder on the cluster. Your terminal looks the same as before but it will print:
 
 ```
   _____                                ______ _   __
@@ -96,7 +107,8 @@ When you do, you are promted for the password for your cluster username. Enter t
   \____/\___|_| |_|\___/|_| |_| |_|\___|___/ \_| \_/
 ```
 
-If you run the `hostname` command, you can see that you are on `fe1.genomedk.net`. Now log out of the cluster again. You do that using `exit` commannd or by presssing `Ctrl-d`. Now you are back on your own machine. Try `hostname` again and see what your own machine is called.
+If you run the `hostname` command, you can see that you are on `fe-open-01`. Now log out of the cluster again. You do that using `exit` command or by pressing `Ctrl-d`. Now you are back on your own machine. Try `hostname` again and see what your own machine is called.
+
 
 ### Allow login without password
 
@@ -130,7 +142,7 @@ cat ~/.ssh/id_rsa.pub | ssh username@login.genome.au.dk 'cat >> .ssh/authorized_
 ```
 
 From now on you can log into the cluster from your local machine without being prompted for a password.
-
+<!-- 
 ## Setting up your home on the cluster
 
 Now log in to the cluster
@@ -169,9 +181,9 @@ Students need bcftools in the psmc exercise. For now, bcftools is installed in t
 So make this work: conda create -n popgen -c bioconda -c kaspermunch bwa platypus-variant samtools beagle plink admixture gnuplot vcftools bcftools
 Maybe also change exercises to only using bcftools and not samtools -->
 
-<!-- ```bash
+<!--> ```bash
 conda create -n popgen -c bioconda -c conda-forge -c kaspermunch bwa platypus-variant samtools beagle=4.1  plink admixture gnuplot vcftools --override-channels
-``` -->
+``` 
 
 ```bash
 conda env create -f ~/populationgenomics/env/popgen.yml
@@ -193,9 +205,9 @@ When you environment is active it says `(popgen)` on the commnad prompt instead 
 
 The first thing you need to do is create a separate conda environment that has jupyter installed. Do not worry about this extra environment. You will not be using it directly. We just need it to be able to run jupyter notebooks in class. 
 
-<!-- ```bash
+ ```bash
 conda create -n jupyter -c conda-forge -c bioconda -c kaspermunch slurm-jupyter popgen-dashboards jupyter jupyterlab ipyparallel pandas numpy matplotlib ipympl ipython ghostscript nodejs seaborn r-essentials rpy2 simplegeneric tzlocal r-vcfr bioconductor-biocinstaller bioconductor-snprelate r-biocmanager
-``` -->
+``` 
 
 ```bash
 conda env create -f ~/populationgenomics/env/jupyter.yml
@@ -215,9 +227,10 @@ config-slurm-jupyter.sh
 
 That script will ask about a lot of information. You can just press enter for all of them **except** when prompted for what password you want to use: Then you must to type your cluster password.
 
-**Now log out of the cluster**.
+**Now log out of the cluster**. 
+-->
 
-## Working on the the cluster
+<!-- ## Working on the the cluster
 
 If you followed each step above, you should now be all set up. Whenever you work on your own machine, you must activate the `popgen` conda environment. When you log into the cluster, you must activate it too. The easiest way to remember, is to make sure it always says `(popgen)` on you command prompt in the terminal.
 
@@ -227,27 +240,19 @@ Now log in to the cluster and activate your `popgen` environemnt:
 ssh usernmae@login.genome.au.dk
 conda activate popgen
 ```
-(replace `username` with your cluster user name, you probably get the drift by now)
+(replace `username` with your cluster user name, you probably get the drift by now) -->
 
-### Your home on the cluster
 
-When you log into the cluster, you are put in your "home folder". All users have a home folder. However, in this course you will not be using your home folder. We have made a special folder with the same name as your usename in the `populationgenomics/students` folder. You should keep everything related to the course in this folder. To get from your home folder to the this course folder you just `cd`:
-
-```bash
-cd populationgenomics/students/username
-```
-
-(replace `username` with your cluster user name)
 
 ### Running interactive commands on the cluster
 
-When you log into the cluster you land on the "front-end" of the cluster. Think of it as the lobby of a giant hotel. If you execute the `hostname` command you will get `fe1.genomedk.net`. `fe1` is the name of the front-end machine. The "front-end" is a single machine shared by anyone who log in. So you cannot run resource intensive jobs there but quick commands are ok. Commands that finish in less than ten seconds are ok. In the exercises for this course, you will run software that takes much longer time to finish. So you need one of the computing machines on the cluster, so you can work on that instead. You ask for a computing machine by running this command:
+When you connect to the cluster using vscode and open a terminal you are on the "front-end" of the cluster. Think of it as the lobby of a giant hotel. If you execute the `hostname` command you will get `fe-open-01`. `fe` is the name of the front-end machine. The "front-end" is a single machine shared by anyone who log in. So you cannot run resource intensive jobs there but quick commands are ok. Commands that finish in less than ten seconds are ok. In the exercises for this course, you will run software that takes much longer time to finish. So you need one of the computing machines on the cluster, so you can work on that instead. You ask for a computing machine by running this command:
 
 ```bash
 srun --mem-per-cpu=1g --time=3:00:00 --account=populationgenomics --pty bash
 ```
 
-That says that you need at most one gigabyte of memory, that you need it for at most three hours (the duration of the exercise), and that the computing expensenses should be billed to the project `populationgenomics` (which is our course). When you execute the command, your terminal will say "srun: job 40924828 queued and waiting for resources". That means that you are waiting for a machine. Once it prints "srun: job 40924828 has been allocated resources", you have been logged into a computing node. If you execute the `hostname` command, you will get something like `s05n20.genomedk.net`. `s05n20` is a computing mechine. Now you can execute any command you like without causing trouble for anyone. 
+That says that you need at most one gigabyte of memory, that you need it for at most three hours (the duration of the exercise), and that the computing expenses should be billed to the project `populationgenomics` (which is our course). When you execute the command, your terminal will say "srun: job 40924828 queued and waiting for resources". That means that you are waiting for a machine. Once it prints "srun: job 40924828 has been allocated resources", you have been logged into a computing node. If you execute the `hostname` command, you will get something like `s05n20.genomedk.net`. `s05n20` is a computing mechine. Now you can execute any command you like without causing trouble for anyone. 
 
 Now try to log out of the compute node by executing the `exit` command or by pressing `Ctrl-d`. If you execute the `hostname` command again you will get `fe1.genomedk.net` showing that you are back at the front-end mechine.
 
