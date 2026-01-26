@@ -114,9 +114,37 @@ You need to the Pixi package manager to install the tools you need for each exer
 curl -fsSL https://pixi.sh/install.sh | sh
 ```
 
-### Create an environment
+## Testing your setup
 
-You also need a dedicated conda environment on the cluster. We will name this `popgen` too, but in this one we will also install all the scientific software you will use in the exercises. Run this command to create the conda envionment:
+Check that your current directory is your personal folder under populationgenomics/
+
+```bash
+pwd
+```
+
+Make a folder for your small test project:
+
+```bash
+mkdir tester
+```
+
+```bash
+cd tester
+```
+
+```bash
+pixi init
+pixi add jupyter nodejs ipykernel seaborn 
+```
+
+```bash
+pixi workspace channel add munch-group
+pixi add iplot
+```
+
+<!-- ### Create an environment
+
+You also need a dedicated conda environment on the cluster. We will name this `popgen` too, but in this one we will also install all the scientific software you will use in the exercises. Run this command to create the conda envionment: -->
 
 <!-- TODO: make an environment that includes bcftools that is not broken. 
 Students need bcftools in the psmc exercise. For now, bcftools is installed in the software folder.
@@ -260,6 +288,4 @@ Watch the terminal to see what is going on. After a while a jupyter notebook sho
 Once ready, jupyter may ask for your cluster password. To close the jupyter notebook, press `Ctrl-c` in the terminal. Closing the browser window does **not** close down the jupyter on the cluster. You can [read this tutorial](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) to learn how to use a jupyter notebook.
 
  -->
-
-## Testing your setup
 
