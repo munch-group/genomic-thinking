@@ -180,21 +180,11 @@
     ]
   },
   {
-    "objectID": "curriculum.html",
-    "href": "curriculum.html",
-    "title": "Curriculum",
-    "section": "",
-    "text": "Links to material you need to download yourself (you may need to be on campus or use your student VPN to download from publisher websites):",
-    "crumbs": [
-      "Curriculum"
-    ]
-  },
-  {
-    "objectID": "slides2026.html",
-    "href": "slides2026.html",
+    "objectID": "slides_2026/slides.html",
+    "href": "slides_2026/slides.html",
     "title": "Lecture slides",
     "section": "",
-    "text": "NB: You need to be logged into Brightspace to download the slides.\n\n\n\nWeek 1\n\nMonday\nWednesday",
+    "text": "NB: You need to be logged into Brightspace to download the slides.\n\n\n\nWeek 1\n\nMonday &lt;!–\n\nThursday\n\nWeek 2\n\nMonday\nThursday\n\nWeek 3\n\nMonday\nThursday\n\nWeek 4\n\nMonday\nThursday\n\nWeek 5\n\nMonday\nThursday\n\nWeek 6\n\nMonday\nThursday\n\nWeek 7\n\nMonday\nThursday\n\nWeek 8\n\nMonday\nThursday\n\nWeek 9\n\nMonday\nThursday\n\nWeek 10\n\nMonday\nThursday\n\nWeek 11\n\nMonday\nThursday\n\nWeek 12\n\nMonday\nThursday\n\nWeek 13\n\nMonday\nThursday\n\nWeek 14\n\nMonday\nThursday\n\nWeek 15\n\nMonday\nThursday\n\n–&gt;",
     "crumbs": [
       "Lecture slides"
     ]
@@ -204,29 +194,51 @@
     "href": "exercises/cluster_practicals/README.html",
     "title": "1  Cluster practicals",
     "section": "",
-    "text": "Setting up your own machine\nThe exercises in this course will be done using our cluster computer. It is called GenomeDK and you can read about it here. We have already recieved a username and a password for the cluster. More about that later.\nIt important that you know that your account on the cluster is temporary. It will be deleted once the course is finished, along with any files you have on the cluster. So make sure to download any files you want to keep before the course is over. Also, your files are not backed up. So if you delete a file, it is gone.\nThe cluster is a very large collection of computers with a shared file system. Using a terminal, you can connect to the cluster from your own computer to run programs. Using other programs you can also create and edit files the same way you can on your own machine. The goal of this exercise is to make you familiar with the cluster and to get you set up to do the exercises in this course.\nBefore we get to the cluster we need to get you properly set up on your own machine. Install VS Code if you did not do so already. VS Code has both an editor and a terminal, and looks the same on Windows and Mac.\nTo get a terminal in vscode, press Ctrl+Shift+P (windows) / Cmd+Shift+P (Mac) to open the Command Palette. Then type “Create new terminal”. You will see it auto-completes quite nicely. Select “Terminal: Create new terminal” and press Enter.",
+    "text": "VS Code\nThe exercises in this course will be done using the GenomeDK. If you do not already have one, please use this form to request a user account on the GenomeDK cluster. I the “Reason” field, you can just write “Taking the course in Genomic Thinking”.\nNote that your account on the cluster is temporary. It will be deleted once the course is finished, along with any files you have on the cluster. So make sure to download any files you want to keep before the course is over. Also, your files are not backed up. So if you delete a file, it is gone.\nBefore we get to the cluster we need to get you properly set up on your own machine. Install VS Code if you did not do so already. VS Code has both an editor and a terminal, and looks the same on Windows and Mac. If you have not used a terminal before, or if you are a bit rusty, you should run through this primer before you go on To get a terminal in vscode, press Ctrl+Shift+P (windows) / Cmd+Shift+P (Mac) to open the Command Palette. Then type “Create new terminal”. You will see it auto-completes quite nicely. Select “Terminal: Create new terminal” and press Enter.",
     "crumbs": [
       "Exercises",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Cluster practicals</span>"
     ]
   },
   {
-    "objectID": "exercises/cluster_practicals/README.html#setting-up-your-own-machine",
-    "href": "exercises/cluster_practicals/README.html#setting-up-your-own-machine",
+    "objectID": "exercises/cluster_practicals/README.html#connecting-to-the-cluster",
+    "href": "exercises/cluster_practicals/README.html#connecting-to-the-cluster",
     "title": "1  Cluster practicals",
-    "section": "",
-    "text": "The Terminal\nMost of the programs we will use in this course are command line applications. I.e. programs that are executed by writing their name and any arguments in a terminal rather than clicking on an icon and using a graphical user interface. There are many different programs that can serve as a terminal. We will use the one that comes with VS code. You will need to know the basics on using a terminal and with executing commands on the command line. If you have not used a terminal before, or if you are a bit rusty, you should run through this primer before you go on. –&gt;\n\n\nYour home on the cluster\nWhen you log into the cluster, you are put in your “home folder”. All users have a home folder. However, in this course you will not be using your home folder. We have made a special folder with the same name as your usename in the populationgenomics/students folder. You should keep everything related to the course in this folder. To get from your home folder to the this course folder you just cd:\ncd populationgenomics/students/username\n(replace username with your cluster user name)\n\n\nConnecting to the cluster\nYou connect to the cluster from the terminal by executing this command (replace username with your cluster user name):\nssh username@login.genome.au.dk\nWhen you do, you are prompted for the password for your cluster username. Enter that and press enter. You are now in your home folder on the cluster. Your terminal looks the same as before but it will print:\n  _____                                ______ _   __\n |  __ \\                               |  _  \\ | / /\n | |  \\/ ___ _ __   ___  _ __ ___   ___| | | | |/ /\n | | __ / _ \\ '_ \\ / _ \\| '_ ` _ \\ / _ \\ | | |    \\\n | |_\\ \\  __/ | | | (_) | | | | | |  __/ |/ /| |\\  \\\n  \\____/\\___|_| |_|\\___/|_| |_| |_|\\___|___/ \\_| \\_/\nIf you run the hostname command, you can see that you are on fe-open-01. Now log out of the cluster again. You do that using exit command or by pressing Ctrl-d. Now you are back on your own machine. Try hostname again and see what your own machine is called.\n\n\nAllow login without password\nYou will need to log in to the cluster many many times, so you should set up your ssh connection to the cluster so you can connect securely without typing the password every time. You do not need to know how this works, but if you are interested, here is roughly how:\n\nFirst, you need to know what public and private encryption keys are. A private key is a very long, random sequence of bits. A private key is kept secret and never leaves your own machine. A public key is another string of bits that is a derivative of the private key. You can generate a unique public key from the private key, but cannot get the private key from a public key: Is a one-way process. Using the public key, you can encrypt (or sign) any message, and it will only be possible to decrypt it using the private key. In other words, anyone with your public key can send you an encrypted messages that only you will be able to read. So, if the cluster has your public key saved, it can authenticate you like this: The cluster sends your machine a message that is encrypted using your public key. Your machine then decrypts the message using its private key and sends it back. If the cluster agrees it is decrypted correctly, it logs you in.\n\nFirst check if you have these two authentication files on your local machine (you can do so by running ls -a ~/.ssh in the terminal):\n~/.ssh/id_rsa\n~/.ssh/id_rsa.pub\nYou most likely do not. If so, you generate a pair of authentication keys with the command below. Just press Enter when asked “Enter file in which to save the key”. Do not enter a passphrase when prompted - just press enter:\nssh-keygen -t rsa\nNow use ssh to create a directory ~/.ssh on the cluster (assuming your username on the cluster is username). You will be prompted for your password.\nssh username@login.genome.au.dk mkdir -p .ssh\nFinally, append the public ssh key on your local machine to the file .ssh/authorized_keys on the cluster and enter your password (replace username with your cluster user name):\ncat ~/.ssh/id_rsa.pub | ssh username@login.genome.au.dk 'cat &gt;&gt; .ssh/authorized_keys'\nFrom now on you can log into the cluster from your local machine without being prompted for a password.",
+    "section": "Connecting to the cluster",
+    "text": "Connecting to the cluster\nYou connect to the cluster from the terminal by executing this command (replace username with your cluster user name):\nssh username@login.genome.au.dk\nWhen you do, you are prompted for the password for your cluster username. Enter that and press enter. You are now in your home folder on the cluster. Your terminal looks the same as before but it will print:\n  _____                                ______ _   __\n |  __ \\                               |  _  \\ | / /\n | |  \\/ ___ _ __   ___  _ __ ___   ___| | | | |/ /\n | | __ / _ \\ '_ \\ / _ \\| '_ ` _ \\ / _ \\ | | |    \\\n | |_\\ \\  __/ | | | (_) | | | | | |  __/ |/ /| |\\  \\\n  \\____/\\___|_| |_|\\___/|_| |_| |_|\\___|___/ \\_| \\_/\nIf you run the hostname command, you can see that you are on fe-open-01. Now log out of the cluster again. You do that using exit command or by pressing Ctrl-d. Now you are back on your own machine. Try hostname again and see what your own machine is called. All users have a home folder. However, in this course you will not be using your home folder. We have made a special folder with the same name as your usename in the populationgenomics/students folder. You should keep everything related to the course in this folder. To get from your home folder to the this course folder you just cd:\ncd populationgenomics/students/username\n(replace username with your cluster user name)",
     "crumbs": [
       "Exercises",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Cluster practicals</span>"
     ]
   },
   {
-    "objectID": "exercises/cluster_practicals/README.html#setting-up-your-home-on-the-cluster",
-    "href": "exercises/cluster_practicals/README.html#setting-up-your-home-on-the-cluster",
+    "objectID": "exercises/cluster_practicals/README.html#set-up-login-without-password",
+    "href": "exercises/cluster_practicals/README.html#set-up-login-without-password",
     "title": "1  Cluster practicals",
-    "section": "Setting up your home on the cluster",
-    "text": "Setting up your home on the cluster\nNow log in to the cluster\nssh username@login.genome.au.dk\n(see, not password).",
+    "section": "Set up login without password",
+    "text": "Set up login without password\nYou will need to log in to the cluster many many times, so you should set up your ssh connection to the cluster so you can connect securely without typing the password every time. On your own computer, open the terminal of your choice and run the command below. This will generate a private/public key-pair with no password. If you have a key already, you can just use that (the command will warn you if you do).\nssh-keygen -t ed25519 -q -N \"\"\nRun the command below to copy the public key to GenomeDK. You will be asked to enter your password for the cluster.\nssh-copy-id -i ~/.ssh/id_ed25519 &lt;username&gt;@login.genome.au.dk\nYou should now be able to log in to the cluster without typing your password. Running the command below, you should not be prompted for a password.\nssh &lt;username&gt;@login.genome.au.dk",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Cluster practicals</span>"
+    ]
+  },
+  {
+    "objectID": "exercises/cluster_practicals/README.html#vs-code-on-the-cluster",
+    "href": "exercises/cluster_practicals/README.html#vs-code-on-the-cluster",
+    "title": "1  Cluster practicals",
+    "section": "VS code on the cluster",
+    "text": "VS code on the cluster\nNow that you have this set up, you can use vscode to log in. To set this up, click the icon depicting four squares in the leftmost icon bar. In the panel that expands, use the top search field to search for “Remote Development” and install the extension pack. Once you have done that, you can click the bottom left corner with the two facing arrows and select “Connect to host…” or “Connect current window to host…”, enter username@login.genome.au.dk and press enter. Once vscode has installed some extensions, you are logged in. Now you can open vscode in whatever folder you want. Open populationgenomics/students/username, which is your folder for the course exercises. Once logged into the cluster wih vscode, you an right-click files in the file browser and select “Download”. To upload files to the cluster folder, you can just drag them into the file browser.",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Cluster practicals</span>"
+    ]
+  },
+  {
+    "objectID": "exercises/cluster_practicals/README.html#install-pixi-on-your-cluster-account",
+    "href": "exercises/cluster_practicals/README.html#install-pixi-on-your-cluster-account",
+    "title": "1  Cluster practicals",
+    "section": "Install Pixi on your cluster account",
+    "text": "Install Pixi on your cluster account\nYou need to the Pixi package manager to install the tools you need for each exercise. Log in to the cluster and install pixi by running this command in the vscode terminal:\ncurl -fsSL https://pixi.sh/install.sh | sh",
     "crumbs": [
       "Exercises",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Cluster practicals</span>"
@@ -237,7 +249,18 @@
     "href": "exercises/cluster_practicals/README.html#testing-your-setup",
     "title": "1  Cluster practicals",
     "section": "Testing your setup",
-    "text": "Testing your setup\nCheck that your current directory is your personal folder under populationgenomics/\npwd\nMake a folder for your small test project:\nmkdir tester\ncd tester\npixi init\npixi add jupyter nodejs ipykernel seaborn \npixi workspace channel add munch-group\npixi add iplot\n\n\n\n\nRunning interactive commands on the cluster\nWhen you connect to the cluster using vscode and open a terminal you are on the “front-end” of the cluster. Think of it as the lobby of a giant hotel. If you execute the hostname command you will get fe-open-01. fe is the name of the front-end machine. The “front-end” is a single machine shared by anyone who log in. So you cannot run resource intensive jobs there but quick commands are ok. Commands that finish in less than ten seconds are ok. In the exercises for this course, you will run software that takes much longer time to finish. So you need one of the computing machines on the cluster, so you can work on that instead. You ask for a computing machine by running this command:\nsrun --mem-per-cpu=1g --time=3:00:00 --account=populationgenomics --pty bash\nThat says that you need at most one gigabyte of memory, that you need it for at most three hours (the duration of the exercise), and that the computing expenses should be billed to the project populationgenomics (which is our course). When you execute the command, your terminal will say “srun: job 40924828 queued and waiting for resources”. That means that you are waiting for a machine. Once it prints “srun: job 40924828 has been allocated resources”, you have been logged into a computing node. If you execute the hostname command, you will get something like s05n20.genomedk.net. s05n20 is a computing mechine. Now you can execute any command you like without causing trouble for anyone.\nNow try to log out of the compute node by executing the exit command or by pressing Ctrl-d. If you execute the hostname command again you will get fe1.genomedk.net showing that you are back at the front-end mechine.\n\n\nRunning commands in the terminal\nWhen you log into the cluster you land on the “front-end” of the cluster. The “front-end” is a single machine shared by anyone who log in. You cannot run resource intensive jobs there, but quick commands are ok. Commands that finish in less than ten secons are ok. Try this command that prints “echos” the string “I can run interactive commands!” to the file nice.txt:\necho \"I can run interactive commands!\" &gt; nice.txt\nUse the cat command to show the contents of nice.txt in the terminal:\ncat nice.txt\n\n\nRunning interactive commands on the cluster\nSay the command above was a long-running command like some population genomic analysis. Then you cannot run it on the front-end. You need to ask for one of the computing machines on the cluster so you can work on that instead. You do that by running this command:\nsrun --mem-per-cpu=1g --time=3:00:00 --account=populationgenomics --pty bash\nThay way you will use at most one gigabyte of memory, that you need at most three hours (the duration of the exercise), and that the computing expensenses should be billed to the project populationgenomics (which is our course). When you execute the command your terminal will say “srun: job 40924828 queued and waiting for resources”. That means that you have asked for a machine. Once it prints “srun: job 40924828 has been allocated resources”, you have been logged into a computing node. If you execute the hostname command you will get something like s05n20.genomedk.net. s05n20 is a computing mechine. Now you can execute any command you like without causing trouble for anyone. Now try to log out of the compute node by executing the exit command or by pressing Ctrl-d. If you execute the hostname command again you will get fe1.genomedk.net. fe1 is the front-end. –&gt;\n\n\n\nHow to copy files to and from the cluster\nOnce logged into the cluster wih vscode, you an right-click files in the file browser and select “Download”. To upload files to the cluster folder, you can just drag them into the file browser.",
+    "text": "Testing your setup\nCheck that your current directory is your personal folder under populationgenomics/\npwd\nMake a folder for your small test project:\nmkdir tester\ncd tester\npixi init\npixi add jupyter nodejs ipykernel seaborn \npixi workspace channel add munch-group\npixi add iplot",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Cluster practicals</span>"
+    ]
+  },
+  {
+    "objectID": "exercises/cluster_practicals/README.html#running-commands-in-the-terminal",
+    "href": "exercises/cluster_practicals/README.html#running-commands-in-the-terminal",
+    "title": "1  Cluster practicals",
+    "section": "Running commands in the terminal",
+    "text": "Running commands in the terminal\nWhen you log into the cluster you land on the “front-end” of the cluster. The “front-end” is a single machine shared by anyone who log in. You cannot run resource intensive jobs there, but commands that finish in less than ten seconds are ok. For commands that take a long time to run, you need to ask for one of the computing machines on the cluster to run it on instead. Run the command below to request and log in to a computing machine. In this case you ask\nsrun --mem-per-cpu=8g --time=3:00:00 --account=populationgenomics --pty bash\nThay way you will use at most eight gigabyte of memory, that you need at most three hours (the duration of the exercise), and that the computing expenses should be billed to the project populationgenomics (which is our course). When you execute the command your terminal will say “srun: job 40924828 queued and waiting for resources”. That means that you have asked for a machine. Once it prints “srun: job 40924828 has been allocated resources”, you have been logged into a computing node. If you execute the hostname command you will get something like s05n20.genomedk.net. s05n20 is a computing mechine. Now you can execute any command you like without causing trouble for anyone. Now try to log out of the compute node by executing the exit command or by pressing Ctrl-d. If you execute the hostname command again you will get fe1.genomedk.net. fe1 is the front-end. –&gt;",
     "crumbs": [
       "Exercises",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Cluster practicals</span>"
