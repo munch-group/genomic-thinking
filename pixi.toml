@@ -1,7 +1,7 @@
 [workspace]
 authors = ["Kasper Munch <kaspermunch@birc.au.dk>"]
 channels = ["conda-forge", "munch-group"]
-name = "munch-group"
+name = "genomic-thinking"
 platforms = ["osx-arm64", "linux-64"]
 version = "0.1.0"
 
@@ -13,5 +13,7 @@ nodejs = ">=24.12.0,<25.3"
 seaborn = ">=0.13.2,<0.14"
 git = ">=2.52.0,<3"
 gh = ">=2.86.0,<3"
+argdash = ">=1.2.3,<2"
+jupyter-server-proxy = ">=4,<5"
 
 
