@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Ancestral Recombination Graphs – Genomic Thinking</title>
+<title>4&nbsp; Browsing ARGs – Genomic Thinking</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -118,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/index.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/arg_and_smc/index.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ancestral Recombination Graphs</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/index.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/arg-dashboard/index.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Browsing ARGs</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -196,8 +161,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/arg_and_smc/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ancestral Recombination Graphs</span></span></a>
+  <a href="../../exercises/arg-dashboard/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Browsing ARGs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -267,9 +232,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/index.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/arg_and_smc/index.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ancestral Recombination Graphs</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/index.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/arg-dashboard/index.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Browsing ARGs</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ancestral Recombination Graphs</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Browsing ARGs</span></h1>
 </div>
 
 
@@ -286,84 +251,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="install-the-arg-dashboard" class="level2">
-<h2 class="anchored" data-anchor-id="install-the-arg-dashboard">Install the ARG dashboard</h2>
-<section id="plan-a-conda" class="level3">
-<h3 class="anchored" data-anchor-id="plan-a-conda">Plan A: Conda</h3>
-<p>Create a conda environment on your own computer:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> arg-dashboard <span class="at">-c</span> conda-forge <span class="at">-c</span> plotly <span class="at">-c</span> kaspermunch popgen-dashboards=1.1.5</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Acitvate the environment:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate arg-dashboard</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Run the dashboard app:</p>
-<pre><code>arg-dashboard</code></pre>
-<p>if it does not show up in your browser, you can right-click (open in new tab) or paste this address into your browser : <a href="http://127.0.0.1:8050">http://127.0.0.1:8050</a></p>
+<section id="exercise-setup" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-setup">Exercise setup</h2>
+<p>Make a folder called arg-dashboard</p>
+<pre><code>mkdir arg-dashboard</code></pre>
+<p>Move into the folder</p>
+<pre><code>cd arg-dashboard</code></pre>
+<p>Initialize a pixi environment</p>
+<pre><code>pixi init</code></pre>
+<p>Add the munch-group channel:</p>
+<pre><code>pixi workspace channel add munch-group</code></pre>
+<p>Install the packages:</p>
+<pre><code>pixi add jupyter nodejs "jupyter-server-proxy&gt;=4,&lt;5" argdash</code></pre>
+<p>Download the notebook to your folder:</p>
+<pre><code>wget https://raw.githubusercontent.com/munch-group/genomic-thinking/refs/heads/master/content/exercises/arg-dashboard/arg-dashboard.ipynb</code></pre>
 </section>
-<section id="plan-b-docker" class="level3">
-<h3 class="anchored" data-anchor-id="plan-b-docker">Plan B: Docker</h3>
-<p>Install <a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a> on your own machine.</p>
-<p>Start the Docker Desktop application (you may be prompted to create a login and password for DockerHub)</p>
-<p>Run the dashboard app in your in the Terminal on Mac or in Anaconda PowerShell Prompt on Windows:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--rm</span> <span class="at">-i</span> <span class="at">-t</span> <span class="at">-p</span> 8050:8050 kaspermunch/arg-dashboard-linux-amd64:1.1.5</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>To view the dashboard, right-click (open in new tab) or paste this address into your browser : <a href="http://127.0.0.1:8050">http://127.0.0.1:8050</a></p>
-<blockquote class="blockquote">
-<p>If you have a small screen, you may need to zoom out a bit to see en entire dashboard. On Chrome, you click the top right three dots and select a zoom level of 80%.</p>
-</blockquote>
-</section>
-</section>
-<section id="exercise-1-simulate-some-args" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1-simulate-some-args">Exercise 1: Simulate some ARGs</h2>
+<section id="exercise-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
 <ol type="1">
-<li>The <em>Main</em> panel shows a simulated graph. Click <code>New</code> to generate a new graph. Dropdown menus control the type of graph, the number of samples and the sequence length. Choose “ARG” for the simulation, a sample size of “5” and a sequence length of “2kb”.</li>
-<li>Simulate a lot of ARGS. Just keep clicking <code>New</code> to see the variation of ARGS.</li>
-<li>Pick and ARG with 2-3 recombincombination events.</li>
-<li>The <em>Coalesce and recombination events</em> panel controls the number of events shown in the graph. The <em>Recombination points</em> panel shows the points of recombination in the sequence. Use the <em>Coalesce and recombination events</em> panel to reconstruct the graph step by step by moving the slider from left to right. Make sure you understand what happens at each coalescence and recombination event.</li>
-<li>Use the two sliders in the <em>Recombination points</em> to retrict the view to a smaller part of the sequence. Watch what happens to the arg as you include more or fewer recombination points on the sequence.</li>
+<li><p>The <em>Main</em> panel shows a simulated graph. Click <code>New</code> to generate a new graph. Dropdown menus control the type of graph, the number of samples and the sequence length. Choose “ARG” for the simulation, a sample size of “5” and a sequence length of “2kb”.</p></li>
+<li><p>Simulate a lot of ARGS. Just keep clicking <code>New</code> to see the variation of ARGS.</p></li>
+<li><p>Pick and ARG with 2-3 recombination events.</p></li>
+<li><p>The <em>Coalesce and recombination events</em> panel controls the number of events shown in the graph. The <em>Recombination points</em> panel shows the points of recombination in the sequence. Use the <em>Coalesce and recombination events</em> panel to reconstruct the graph step by step by moving the slider from left to right. Make sure you understand what happens at each coalescence and recombination event.</p></li>
+<li><p>Use the two sliders in the <em>Recombination points</em> to retrict the view to a smaller part of the sequence. Watch what happens to the arg as you include more or fewer recombination points on the sequence.</p></li>
 </ol>
 </section>
-<section id="exercise-2-ancestral-sequences-and-marginal-trees" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-2-ancestral-sequences-and-marginal-trees">Exercise 2: Ancestral sequences and marginal trees</h2>
+<section id="exercise-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
 <ol type="1">
-<li>Click <code>New</code> to find an ARG with 2-3 recombincombination events where some of the nodes are not red. Ancestral node colors reflect the proportion of the sequence that is represented in the ancestor. Ancestral material is the part of the sequence that has a descendants among the sampled sequences. Mouse-over a node to see the type of event and the proportion of ancestal proportion sequence at each node.</li>
-<li>Notice how mouse-over also activates the <em>Ancestral sequences</em> and <em>Marginal trees</em> panels. The <em>Ancestral sequences</em> panel shows how ancestral material is merged at coalescence events and divided at recombination events. Sequence segments separated by recombination events are shown with separate colors. The genalogy for each segment is shown in the <em>Marginal tree</em> panel with a color matching the segment. Non-ancestral segments are shown in white. Mouse-over the root node of the ARG to see all marginal trees (genealogies) for the ARG. Mouse-over other nodes to see the marginal trees below that node.</li>
-<li>Use the slider in the <em>Recombination points</em> panel to show the graph for only a subset of the sequence. Notice how this affects the shown ARG and the marginal trees when you mouse-over a node. Sequence outside the range specified in the <em>Recombination points</em> panel is shown as gray in the <em>Ancestral sequences</em> panel.</li>
-<li>The marginal trees look a lot like each other. Try to understand how each one if different from its neighbor. You can make the range in the <em>Recombination points</em> slider really small so it shows only one marginal tree at a time. Now move it along the sequence to see how the ARG changes. Can you see that only one branch detaches and is moved somewhere else?</li>
+<li><p>Click <code>New</code> to find an ARG with 2-3 recombincombination events where some of the nodes are not red. Ancestral node colors reflect the proportion of the sequence that is represented in the ancestor. Ancestral material is the part of the sequence that has a descendants among the sampled sequences. Mouse-over a node to see the type of event and the proportion of ancestal proportion sequence at each node.</p></li>
+<li><p>Notice how mouse-over also activates the <em>Ancestral sequences</em> and <em>Marginal trees</em> panels. The <em>Ancestral sequences</em> panel shows how ancestral material is merged at coalescence events and divided at recombination events. Sequence segments separated by recombination events are shown with separate colors. The genalogy for each segment is shown in the <em>Marginal tree</em> panel with a color matching the segment. Non-ancestral segments are shown in white. Mouse-over the root node of the ARG to see all marginal trees (genealogies) for the ARG. Mouse-over other nodes to see the marginal trees below that node.</p></li>
+<li><p>Use the slider in the <em>Recombination points</em> panel to show the graph for only a subset of the sequence. Notice how this affects the shown ARG and the marginal trees when you mouse-over a node. Sequence outside the range specified in the <em>Recombination points</em> panel is shown as gray in the <em>Ancestral sequences</em> panel.</p></li>
 </ol>
 </section>
-<section id="exercise-3-captured-non-ancestral-sequence" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3-captured-non-ancestral-sequence">Exercise 3: “Captured” non-ancestral sequence</h2>
+<section id="exercise-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
 <ol type="1">
-<li>See if you can find any nodes where non-ancestral sequence is “captured” between two ancestral (colored) segments. Figure out how the segment you found got trapped between two ancestral sequence segments.</li>
-<li>See if you can find it i the SMC. If you cannot, why do you think that is?</li>
+<li><p>The marginal trees look a lot like each other. Try to understand how each one if different from its neighbor. You can make the range in the <em>Recombination points</em> slider really small so it shows only one marginal tree at a time. Now move it along the sequence to see how the ARG changes. Can you see that only one branch detaches and is moved somewhere else?</p></li>
+<li><p>Some recombination events do not show up as bifurcations. This because they are followed by a coalescence event that merge the same segments back into one lineage. Simulate some args to see if you can find some of these. You can see them as two nodes on a lineage following each other. Mouse-over the recombination node to see how the sequence segments first split into two lineages and then coalesce at the following coalescence node.</p></li>
 </ol>
 </section>
-<section id="exercise-4-diamond-recombinations" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4-diamond-recombinations">Exercise 4: “Diamond” recombinations</h2>
+<section id="exercise-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-4">Exercise 4</h2>
 <ol type="1">
-<li>Simulating from the ARG, you may have noticed that some recombinations events produce two lineages that coalesce with each other rather than with other lineages. The following coalescence nullifies the preceeding recombination event. This produces producing an “eye” or “diamond” in the graph. Such recombination events cannot be inferred from data (if you mouse over the nodes you can see why), but they are part of the evolutionary history of a sample none the less.</li>
-<li>Try the SMC. Do you find any “diamonds”?. Why?</li>
-<li>Now try the SMC’. Do you find any “diamonds”?. Why?</li>
-<li>What do you think assuming diamonds do not exist does to the estimation of the graph?</li>
+<li><p>See if you can find any nodes where non-ancestral sequence is “captured” between two ancestral (colored) segments. Figure out how the segment you found got trapped between two ancestral sequence segments.</p></li>
+<li><p>See if you can find it i the SMC’. If you cannot, why do you think that is?</p></li>
 </ol>
 </section>
-<section id="exercise-5-imagine-complexity" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-5-imagine-complexity">Exercise 5: Imagine complexity</h2>
+<section id="exercise-5" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-5">Exercise 5</h2>
 <ol type="1">
 <li>Imagine and ARG for a human chromosome - 100,000 times larger than the 2kb we are considering here.</li>
 </ol>
-<!-- Log into [UCloud](https://cloud.sdu.dk/app/dashboard) and complete this part of the exercise there. -->
-<!-- Set this up on your own machine
-
-```
-conda create --name popgen-dashboards -c conda-forge -c plotly -c kaspermunch popgen-dashboards
-```
-
-First, clone the following github: 
-
-git clone https://github.com/kaspermunch/popgen-dashboards/
-
-Then download the notebook by right-clicking <a href="https://raw.githubusercontent.com/kaspermunch/PopulationGenomicsCourse/master/Notebooks/arg-dashboard.ipynb" download="arg-dashboard.ipynb">
-this link
-</a> and "choose save link as". Place it in the popgen_dashboards folder, and run it using jupyter notebook -e popgen-dashboards -->
 
 
 </section>
