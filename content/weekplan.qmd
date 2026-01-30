@@ -25,9 +25,9 @@ panels: true
 
 **Lectures:** The Coalescent and the ARG: Coop chapt 4, [Paper: Simons Genome Diversity Project] <!-- [Paper on Platypus] -->
 
-**Exercises:** [Browsing ARGs](https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/mapping_and_calling)
+**Exercises:** [Browsing ARGs](https://munch-group.org/docs/genomic-thinking/exercises/mapping_and_calling)
 
-<!-- **Exercises:** [Read mapping and base calling](https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/mapping_and_calling) -->
+<!-- **Exercises:** [Read mapping and base calling](https://munch-group.org/docs/genomic-thinking/exercises/mapping_and_calling) -->
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -35,31 +35,31 @@ panels: true
 
 ### **Week 7**
 
-**Reading:**
+**Lectures:** Population structure, Incomplete lineage sorting, HMMs, Coop chapt 6, [Review on ILS](https://doi.org/10.1146/annurev-genet-120213-092532)
 
-**Lectures:** Past population demography, HMMs, ARG, [Paper on PSMC](https://www.nature.com/articles/nature10231)
+**Exercises:** [Inference of population structure and admixture](https://munch-group.org/docs/genomic-thinking/exercises/population_structure)
 
-**Exercises:** [Estimating past population sizes](https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/demography)
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 ## 4 {.unnumbered}
 
-### **Week 8**
+**Lectures:** Past population demography, HMMs, PSMC, [Paper on PSMC](https://www.nature.com/articles/nature10231)
 
-**Lectures:** Recombination, Phasing, HMMs, ARG, PSMC [Paper on tree inference](https://www.nature.com/articles/s41588-019-0484-x), [Review on recombination rate](https://www.nature.com/articles/s41576-020-0240-1)
+**Exercises:** [Estimating past population sizes](https://munch-group.org/docs/genomic-thinking/exercises/demography)
 
-**Exercises:** [Phasing and recombination](https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/phasing)
-
-## 5 {.unnumbered}
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
 
+## 5 {.unnumbered}
+
 ### **Week 9**
 
-**Lectures:** Population structure, Incomplete lineage sorting\*\*, HMMs, Coop chapt 6, [Review on ILS](https://doi.org/10.1146/annurev-genet-120213-092532)
+### **Week 8**
 
-**Exercises:** [Inference of population structure and admixture](https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/population_structure)
+**Lectures:** HMMs, ARG [Paper on tree inference](https://www.nature.com/articles/s41588-019-0484-x) <!--, [Review on recombination rate](https://www.nature.com/articles/s41576-020-0240-1) -->
+
+**Exercises:** [Tree sequences](https://munch-group.org/docs/genomic-thinking/exercises/tree_sequences)
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -69,7 +69,7 @@ panels: true
 
 **Lectures:** Admixture, HMMs, [Review on admixture](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1007349), [Paper on admixture inference](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1007641)
 
-**Exercises:** [Tree sequences](https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/tree_sequences)
+**Exercises:** [Phasing and recombination](https://munch-group.org/docs/genomic-thinking/exercises/phasing)
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -77,9 +77,9 @@ panels: true
 
 ### **Week 11**
 
-**Lectures:** Direct and linked selection, Coop chapt 12, 13, revisit [Paper on tree inference](https://www.nature.com/articles/s41588-019-0484-x)
+**Lectures:** Direct and linked selection, Coop chapt 12, 13
 
-**Exercises:** [Inference of positive selection](https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/selection)
+**Exercises:** [Inference of positive selection](https://munch-group.org/docs/genomic-thinking/exercises/selection)
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -89,7 +89,7 @@ panels: true
 
 **Lectures:** Projects, Popgen overview [Mandatory project description](https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Projects)
 
-**Exercises:** [GWAS quality control](https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/GWAS_QC)
+**Exercises:** [GWAS quality control](https://munch-group.org/docs/genomic-thinking/exercises/GWAS_QC)
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -99,7 +99,7 @@ panels: true
 
 **Lectures:** GWAS review, Population stratification review, Coop 99-120
 
-**Exercises:** [Association testing](https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/GWAS_association)
+**Exercises:** [Association testing](https://munch-group.org/docs/genomic-thinking/exercises/GWAS_association)
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -111,7 +111,7 @@ panels: true
 
 **Lectures:** Heritability, [Review on heritability and LMM](https://dl.acm.org/doi/10.1145/2817827) ; Coop Sec 2.2 (p23-36) + Chapt 7 (p119-142)
 
-**Exercises:** [Estimating heritability](https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/heritability)
+**Exercises:** [Estimating heritability](https://munch-group.org/docs/genomic-thinking/exercises/heritability)
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -169,7 +169,7 @@ panels: true
 
 <!-- https://brightspace.au.dk/d2l/common/viewFile.d2lfile/Content/L2NvbnRlbnQvZW5mb3JjZWQvMTY2Mjk3LUxSNDA2NTEvYXJnbmVlZGxlLnBkZg/argneedle.pdf?ou=166297 -->
 
-[Tree sequences]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/tree_sequences
+[Tree sequences]: https://munch-group.org/docs/genomic-thinking/exercises/tree_sequences
 [GWAS review]: https://
 [Population stratification review]: https://
 [Review on heritability and LMM]: https://dl.acm.org/doi/10.1145/2817827
@@ -177,18 +177,18 @@ panels: true
 [Article on "omnigenic" model]: https://
 
 <!-- Exercise links -->
-[Cluster practicals]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/cluster_practicals
-[Read mapping and base calling]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/mapping_and_calling
-[Estimating past population sizes]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/demography
-[Estimating past population sizes]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/demography
-[Phasing and recombination]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/phasing
-[Inference of population structure and admixture]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/population_structure
-[Detecting archaic ancestry in modern humans]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/admixture
-[Tree sequences]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/tree_sequences
-[Inference of positive selection]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/selection
-[GWAS quality control]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/GWAS_QC
-[Association testing]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/GWAS_association
-[Estimating heritability]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/heritability
+[Cluster practicals]: https://munch-group.org/docs/genomic-thinking/exercises/cluster_practicals
+[Read mapping and base calling]: https://munch-group.org/docs/genomic-thinking/exercises/mapping_and_calling
+[Estimating past population sizes]: https://munch-group.org/docs/genomic-thinking/exercises/demography
+[Estimating past population sizes]: https://munch-group.org/docs/genomic-thinking/exercises/demography
+[Phasing and recombination]: https://munch-group.org/docs/genomic-thinking/exercises/phasing
+[Inference of population structure and admixture]: https://munch-group.org/docs/genomic-thinking/exercises/population_structure
+[Detecting archaic ancestry in modern humans]: https://munch-group.org/docs/genomic-thinking/exercises/admixture
+[Tree sequences]: https://munch-group.org/docs/genomic-thinking/exercises/tree_sequences
+[Inference of positive selection]: https://munch-group.org/docs/genomic-thinking/exercises/selection
+[GWAS quality control]: https://munch-group.org/docs/genomic-thinking/exercises/GWAS_QC
+[Association testing]: https://munch-group.org/docs/genomic-thinking/exercises/GWAS_association
+[Estimating heritability]: https://munch-group.org/docs/genomic-thinking/exercises/heritability
 
 <!-- Project links -->
 [Mandatory project description]: https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Projects

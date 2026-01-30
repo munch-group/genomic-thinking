@@ -27,20 +27,20 @@ book:
     #   - lecture_notes/coalescent.qmd
     - part: "Exercises"
       chapters: 
-      - exercises/cluster_practicals/README.md
-      - exercises/mapping_and_calling/README.md
-      - exercises/phasing/README.md
-      - exercises/arg_and_smc/README.md
-      - exercises/historical_pop_size/README.md
-      - exercises/population_structure/README.md
-      - exercises/admixture/README.md
-      - exercises/tree_sequences/README.md
-      - exercises/selection/README.md
-      - exercises/archaic_humans/README.md
-#      - exercises/f_statistics/README.md
-      - exercises/GWAS_QC/README.md
-      - exercises/GWAS_association/README.md
-      - exercises/heritability/README.md
+      - exercises/cluster_practicals/index.qmd
+      - exercises/mapping_and_calling/index.qmd
+      - exercises/phasing/index.qmd
+      - exercises/arg_and_smc/index.qmd
+      - exercises/historical_pop_size/index.qmd
+      - exercises/population_structure/index.qmd
+      - exercises/admixture/index.qmd
+      - exercises/tree_sequences/index.qmd
+      - exercises/selection/index.qmd
+      - exercises/archaic_humans/index.qmd
+#      - exercises/f_statistics/index.qmd
+      - exercises/GWAS_QC/index.qmd
+      - exercises/GWAS_association/index.qmd
+      - exercises/heritability/index.qmd
 
 crossref:
   sec-prefix: "exercise"
