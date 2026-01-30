@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9&nbsp; Positive selection – Genomic Thinking</title>
+<title>13&nbsp; Heritability – Genomic Thinking</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../exercises/archaic_humans/README.html" rel="next">
-<link href="../../exercises/tree_sequences/README.html" rel="prev">
+<link href="../../exercises/GWAS_association/index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -83,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/README.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/selection/README.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Positive selection</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/index.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/heritability/index.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Heritability</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -143,79 +177,79 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/cluster_practicals/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/cluster_practicals/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cluster practicals</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/mapping_and_calling/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/mapping_and_calling/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Mapping and calling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/phasing/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/phasing/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Genotype phasing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/arg_and_smc/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/arg_and_smc/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ancestral Recombination Graphs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/historical_pop_size/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/historical_pop_size/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Historical populations size</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/population_structure/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/population_structure/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Population structure</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/admixture/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/admixture/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Historical populations sizes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/tree_sequences/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/tree_sequences/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tree sequences</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/selection/README.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../exercises/selection/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Positive selection</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/archaic_humans/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/archaic_humans/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Archaic ancestry in humans</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/GWAS_QC/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/GWAS_QC/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">GWAS Quality Control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/GWAS_association/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/GWAS_association/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Association testing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/heritability/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/heritability/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Heritability</span></span></a>
   </div>
 </li>
@@ -232,9 +266,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/README.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/selection/README.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Positive selection</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/index.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/heritability/index.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Heritability</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Positive selection</span></h1>
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Heritability</span></h1>
 </div>
 
 
@@ -251,69 +285,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>In this exercise we will work on inference of selection using the Relate tool that we also used in the <a href="https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/tree_sequences">exercise about tree sequences</a>. In that exercise we analyzed individuals from three populations and inferred all the trees along the chr2 region we have been working on. In this exercise we are going to use those trees to take the analysis a step further and look for positive selection in our chr2 region. So we pick up the <a href="https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/tree_sequences">tree sequences exercise</a> where we left it and you should continue this exericse in the same folder. That way you have access to the files you you produced the other exercise.</p>
-<section id="request-an-interactive-session-on-a-compute-node" class="level2">
-<h2 class="anchored" data-anchor-id="request-an-interactive-session-on-a-compute-node">Request an interactive session on a compute node:</h2>
-<p>Begin by requesting an interactive job:</p>
-<pre><code>srun --mem-per-cpu=5g --time=3:00:00 --account=populationgenomics --pty bash</code></pre>
-<p>I will take a while to finish, so just leave the terminal for now and go on with the exercise.</p>
+<section id="software" class="level3">
+<h3 class="anchored" data-anchor-id="software">Software:</h3>
+<p>In this exercise we will be using GCTA. You can see the documentation <a href="http://cnsgenomics.com/software/gcta/#Download">here</a>. We will be also using plink 1.9, you can see the documentation <a href="https://www.cog-genomics.org/plink/1.9/">here</a>.</p>
 </section>
-<section id="build-the-environment-for-the-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="build-the-environment-for-the-exercise">Build the environment for the exercise:</h2>
-<pre><code>conda env create -f ~/populationgenomics/env/pg-relate.yml</code></pre>
-<p>Most of you did this last time, I hope, so if it is already installed, just activate it and download some extra packages</p>
-<pre><code>conda activate pg-relate-bjarke
-conda install pandas rpy2</code></pre>
+<section id="exercise-contents" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-contents">Exercise contents:</h3>
+<p>We will estimate the amount of variance explained by the SNPs in a GWAS dataset. You can find the data here:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">~/populationgenomics/data/GWAS/GWAS_heritability/gwa.bim</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">~/populationgenomics/data/GWAS/GWAS_heritability/gwa.bed</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">~/populationgenomics/data/GWAS/GWAS_heritability/gwa.fam</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">~/populationgenomics/data/GWAS/GWAS_heritability/gwa.phen</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="know-what-you-are-doing" class="level2">
-<h2 class="anchored" data-anchor-id="know-what-you-are-doing">Know what you are doing</h2>
-<p>Since we already have the trees along our genomic alignment we can now use Relate to analyze each tree and compute the likelihood that it was shaped by positive selection. But before running the analysis you need to make sure you understand how Relate quantifies evidence of selelction and how that relates to what you know about positive selection. It just more fun when you know what is happening. So, <strong>Team up with one or more fellow students</strong> and make sure you understand the relevant Methods section in the <a href="https://www.nature.com/articles/s41588-019-0484-x">Relate paper</a> as well as the section “A tree-based statistic for detecting positive selection” in the <a href="https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-019-0484-x/MediaObjects/41588_2019_484_MOESM1_ESM.pdf">supplementary note for the paper</a>.</p>
+<section id="calculating-the-genetic-relationship-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="calculating-the-genetic-relationship-matrix">Calculating the genetic relationship matrix</h3>
+<p>We will use plink to calculate the genetic relationship matrix (GRM) since it is faster than gcta. At the shell prompt, type:</p>
+<pre><code>plink --make-grm-gz --bfile gwa --out gwa</code></pre>
+<p>This will save the genetic relationship matrix in the zipped file gwa.grm.gz. Try to read it into R:</p>
+<pre><code>d &lt;- read.table(gzfile('gwa.grm.gz'))
+names(d) &lt;- c("sample1","sample2","variants","statistic")</code></pre>
+<p><em>1) If you exclude the lines where an individual is compared to itself (column 1 is equal to column 2) what is the highest value in the GRM then?</em></p>
 </section>
-<section id="running-relate-on-thee-populations" class="level2">
-<h2 class="anchored" data-anchor-id="running-relate-on-thee-populations">Running Relate on thee populations</h2>
-<p>When you are ready, you should have a command prompt from srun. Use that terminal to activate the <code>pg-relate</code> environment.</p>
-<p>The Relate command below detects positive selection. At this point, we are detecting selection based on three distinct populations.</p>
-<pre><code>~/populationgenomics/software/relate/scripts/DetectSelection/DetectSelection.sh -i popsize -m 1.25e-8 --poplabels 60_inds.txt -o selection_relate</code></pre>
-<p>Have a look at the <code>selection_relate.sele</code> produced, and see what is in there. Column 35 is the log10 p-value for selection (). Run slurm-jupyter with this command on your own computer:</p>
-<pre><code>slurm-jupyter -e pg-relate -A populationgenomics -m 8g -t 3h -u username</code></pre>
-<p>and open an R notebook (click big blue <code>+</code> button top left and click R notebook). Then this R code to to plot the p-values across the chr2 region:</p>
-<p>If the R notebook option is not available, you can just make a python notebook and run this command:</p>
-<pre><code>import rpy2
-
-%load_ext rpy2.ipython</code></pre>
-<p>Now for every cell after this, you should add ‘%%R’ to the start of the cell</p>
-<pre><code>library(tidyverse)
-options(repr.plot.width=14, repr.plot.height=5)
-df &lt;- read.table("selection_relate.sele", header=1) %&gt;% select(pos,rs_id,when_mutation_has_freq2) %&gt;% rename(pval_log10 = when_mutation_has_freq2)
-head(df)</code></pre>
-<pre><code>ggplot(df, aes(x=pos, y=-pval_log10, color=when_mutation_has_freq2)) + 
-  geom_point(size=1.5) + 
-  scale_x_continuous(limits = c(130000000,145000000)) +
-  scale_y_continuous(limits = c(0,7)) +
-  theme_bw()</code></pre>
-<p>Now try to zoom in on the region 135000000-136000000 by changing the arguments to scale_x_continuous. What do you see? It is impossible to read the actual coordinates of each SNP, but you can quickly list the sites with the strongest signal of selection in the terminal: You reverse-sort the result file on column 35 (which is the one with the log10 p-value for selection) using <code>sort -k35r</code> and then pipe the output into <code>head -n 10</code> which prints the first 10 lines of output:</p>
-<pre><code>sort -k35r selection_relate.sele | head -n 10</code></pre>
-<p>If you only want columns 1, 2, and 35 you can cut those out like this:</p>
-<pre><code>sort -k35r selection_relate.sele | cut -f 1,2,35 -d ' ' | head -n 10</code></pre>
-<p><strong>Do you see any of the top SNPs in the interval you just looked at?</strong></p>
-<p>Try plotting some of the sites with the following command. Use -o to determine name of the output file, and bp_of_interest for the position (remember to change both every time you run the command).</p>
-<pre><code>~/populationgenomics/software/relate/scripts/TreeView/TreeView.sh --haps chr2.haps --sample chr2.sample --anc popsize.anc --mut popsize.mut --poplabels 60_inds.txt --years_per_gen 28 -o tree_135472847 --bp_of_interest 135472847</code></pre>
-<p>Each command produces a pdf file (<code>tree_135472847.pdf</code> in the above case) that you can view using slurm-jupyter.</p>
-<p><strong>Are the three populations affected by the sweep in the same way?</strong></p>
-<p><strong>Do the three populations form seperate clades? Are they expected to, sweep or not?</strong></p>
-<p><strong>Find the name of the SNP at 135472847 using the command extracting the top SNPs. The name is in column 2 and starts with “rs”.</strong></p>
-<p><strong>Use the UCSC genome browser to look for genes near this SNP. Can you find any good candidates?</strong></p>
+<section id="estimating-variance-components" class="level3">
+<h3 class="anchored" data-anchor-id="estimating-variance-components">Estimating variance components</h3>
+<p>We’ll first need to install the package in our counda environments by running:</p>
+<pre><code>conda install -c bioconda gcta</code></pre>
 </section>
-<section id="analysis-of-only-the-british-population-gbr" class="level2">
-<h2 class="anchored" data-anchor-id="analysis-of-only-the-british-population-gbr">Analysis of only the British population (GBR)</h2>
-<p><strong>Consider if it using samples from different populations could cause problems for the way Relate detects selection</strong></p>
-<p>In general, selection scans of this kind will perform better if it is for a single population. Try rerunning the analysis with pure brits. First link these two files to your working directory:</p>
-<pre><code>ln -s ~/populationgenomics/data/relate_data/50_GBR_inds.txt
-ln -s ~/populationgenomics/data/relate_data/chr2_GBR_phased.vcf.gz </code></pre>
-<p>Now you can rerun all the relate commands with these two new files, including the ones you did in the <a href="https://github.com/kaspermunch/PopulationGenomicsCourse/tree/master/Exercises/tree_sequences">exercise about tree sequences</a>. All the other files you need are still the same.</p>
-<p><strong>Do you get different or similar results?</strong></p>
-<p><strong>Try plotting trees at the same positions in the two different analyses, and see whether the trees in the analysis of only GBR are similar to the ones including all three populations.</strong></p>
-<!-- TODO: Add Clues analysis -->
+<section id="estimating-variance-components-1" class="level3">
+<h3 class="anchored" data-anchor-id="estimating-variance-components-1">Estimating variance components</h3>
+<p>We can use gcta to estimate how much of the variance in the phenotype in gwa.phen is explained by the SNPs:</p>
+<pre><code>gcta64 --grm-gz gwa --pheno gwa.phen --reml --out test</code></pre>
+<p><em>2) How much of the phenotypic variance (Vp) is explained by the genetic variance (V(G))?</em></p>
+<p><em>3) Is this number larger or smaller than the narrow-sense heritability (h^2) of the trait?</em></p>
+</section>
+<section id="estimating-variance-components-for-groups-of-snps" class="level3">
+<h3 class="anchored" data-anchor-id="estimating-variance-components-for-groups-of-snps">Estimating variance components for groups of SNPs</h3>
+<p>The estimation of variance components can be used to answer questions about how much of the heritability is explained by different parts of the genome (for example different chromosomes or different functional annotations).</p>
+<p><em>4) How much of the phenotypic variance can be explained by the genetic variants on chromosome 6? (You can use the “–chr” flag in plink to build a GRM only using variants from a particular chromosome)</em></p>
+<p><em>5) Does chromosome 6 contribute more to the heritability than would be expected? How many of the genetic variants in the data set are located on chr 6? (you can use the genetic map in gwa.bim to see the location of the variants).</em></p>
 
 
 </section>
@@ -721,14 +730,11 @@ ln -s ~/populationgenomics/data/relate_data/chr2_GBR_phased.vcf.gz </code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../exercises/tree_sequences/README.html" class="pagination-link" aria-label="Tree sequences">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tree sequences</span></span>
+      <a href="../../exercises/GWAS_association/index.html" class="pagination-link" aria-label="Association testing">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Association testing</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../exercises/archaic_humans/README.html" class="pagination-link" aria-label="Archaic ancestry in humans">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Archaic ancestry in humans</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

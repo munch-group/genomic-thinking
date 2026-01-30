@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Cluster practicals – Genomic Thinking</title>
+<title>8&nbsp; Tree sequences – Genomic Thinking</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -65,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../exercises/mapping_and_calling/README.html" rel="next">
-<link href="../../slides_2026/slides.html" rel="prev">
+<link href="../../exercises/selection/index.html" rel="next">
+<link href="../../exercises/admixture/index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -118,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/README.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/README.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cluster practicals</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/index.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/tree_sequences/index.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tree sequences</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -178,79 +143,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/cluster_practicals/README.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../exercises/cluster_practicals/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cluster practicals</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/mapping_and_calling/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/mapping_and_calling/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Mapping and calling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/phasing/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/phasing/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Genotype phasing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/arg_and_smc/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/arg_and_smc/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ancestral Recombination Graphs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/historical_pop_size/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/historical_pop_size/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Historical populations size</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/population_structure/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/population_structure/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Population structure</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/admixture/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/admixture/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Historical populations sizes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/tree_sequences/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/tree_sequences/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tree sequences</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/selection/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/selection/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Positive selection</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/archaic_humans/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/archaic_humans/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Archaic ancestry in humans</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/GWAS_QC/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/GWAS_QC/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">GWAS Quality Control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/GWAS_association/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/GWAS_association/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Association testing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/heritability/README.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/heritability/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Heritability</span></span></a>
   </div>
 </li>
@@ -267,9 +232,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/README.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/README.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cluster practicals</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/cluster_practicals/index.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/tree_sequences/index.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tree sequences</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cluster practicals</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tree sequences</span></h1>
 </div>
 
 
@@ -286,62 +251,76 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The exercises in this course will be done using the <a href="https://genome.au.dk/">GenomeDK</a>. If you do not already have one, please use <a href="https://console.genome.au.dk/user-requests/create/?zone=open">this form</a> to request a user account on the GenomeDK cluster. I the “Reason” field, you can just write “Taking the course in Genomic Thinking”.</p>
-<p>Note that your account on the cluster is <strong>temporary</strong>. It will be deleted once the course is finished, along with any files you have on the cluster. So make sure to download any files you want to keep before the course is over. Also, your files are <strong>not backed up</strong>. So if you delete a file, it is gone.</p>
-<section id="vs-code" class="level2">
-<h2 class="anchored" data-anchor-id="vs-code">VS Code</h2>
-<p>Before we get to the cluster we need to get you properly set up on your own machine. Install VS Code if you did not do so already. VS Code has both an editor and a terminal, and looks the same on Windows and Mac. If you have not used a terminal before, or if you are a bit rusty, you should run through <a href="https://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything">this primer</a> before you go on To get a terminal in vscode, press Ctrl+Shift+P (windows) / Cmd+Shift+P (Mac) to open the Command Palette. Then type “Create new terminal”. You will see it auto-completes quite nicely. Select “Terminal: Create new terminal” and press Enter.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://user-images.githubusercontent.com/47324240/158781125-b0d4af85-69dd-4d4a-b722-30da62e8c18f.png" class="img-fluid figure-img"></p>
+<figcaption>billede</figcaption>
+</figure>
+</div>
+<p>If the sequences in your data set are individual haplotypes, it is possible to construct the coalescence trees for each nonrecombining segment of a genomic alignment. If you are working on male X chromosomes this is easy because they are haploid and do not require phasing. However, autosomes are diploid, and we would like to use haplotype-based analysis here as well. This can be done through either phasing of short reads mapped to a reference genome, or by assembing each haplotype <code>de novo</code> using long reads such as PacBio HiFi. Your chr2 data set is already phased so you are good to go.</p>
+<p>In this exercise we will run the Relate program to infer local trees. In the upcomming exercises we will revisit this tree sequence and use it for inference of demography and selection.</p>
+<section id="request-an-interactive-session-on-a-compute-node" class="level2">
+<h2 class="anchored" data-anchor-id="request-an-interactive-session-on-a-compute-node">Request an interactive session on a compute node:</h2>
+<p>Begin by requesting an interactive job:</p>
+<pre><code>srun --mem-per-cpu=5g --time=3:00:00 --account=populationgenomics --pty bash</code></pre>
 </section>
-<section id="connecting-to-the-cluster" class="level2">
-<h2 class="anchored" data-anchor-id="connecting-to-the-cluster">Connecting to the cluster</h2>
-<p>You connect to the cluster from the terminal by executing this command (replace <code>username</code> with your cluster user name):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> username@login.genome.au.dk</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>When you do, you are prompted for the password for your cluster username. Enter that and press enter. You are now in your home folder on the cluster. Your terminal looks the same as before but it will print:</p>
-<pre><code>  _____                                ______ _   __
- |  __ \                               |  _  \ | / /
- | |  \/ ___ _ __   ___  _ __ ___   ___| | | | |/ /
- | | __ / _ \ '_ \ / _ \| '_ ` _ \ / _ \ | | |    \
- | |_\ \  __/ | | | (_) | | | | | |  __/ |/ /| |\  \
-  \____/\___|_| |_|\___/|_| |_| |_|\___|___/ \_| \_/</code></pre>
-<p>If you run the <code>hostname</code> command, you can see that you are on <code>fe-open-01</code>. Now log out of the cluster again. You do that using <code>exit</code> command or by pressing <code>Ctrl-d</code>. Now you are back on your own machine. Try <code>hostname</code> again and see what your own machine is called. All users have a home folder. However, in this course you will not be using your home folder. We have made a special folder with the same name as your usename in the <code>populationgenomics/students</code> folder. You should keep everything related to the course in this folder. To get from your home folder to the this course folder you just <code>cd</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> populationgenomics/students/username</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>(replace <code>username</code> with your cluster user name)</p>
+<section id="set-up-an-environment-for-the-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-an-environment-for-the-exercise">Set up an environment for the exercise:</h2>
+<p>Relate will produce plots with its population size and marginal tree scripts, and this requires some specific r packages. We install these in a separate environment that we just use for running Relate:</p>
+<!-- TODO: Add the below packages to the popgen-notebooks env -->
+<!-- ```
+conda create -y -n pg-relate -c conda-forge r-base r-tidyverse r-ggplot2 r-cowplot r-gridextra libgcc jupyterlab notebook nodejs ipython
+``` -->
+<pre><code>conda env create -f ~/populationgenomics/env/exercise_envs/bjarke-relate.yml</code></pre>
+<p>All the Relate scripts can be run in this environment, so make sure the <code>pg-relate</code> is activated when you are working on this exericse. To allow Relate find some files it needs, you also need to run the commands below <em>in order</em>.</p>
+<pre><code>conda activate pg-relate-bjarke
+conda env config vars set LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+conda deactivate
+conda activate pg-relate-bjarke</code></pre>
 </section>
-<section id="set-up-login-without-password" class="level2">
-<h2 class="anchored" data-anchor-id="set-up-login-without-password">Set up login without password</h2>
-<p>You will need to log in to the cluster many many times, so you should set up your <code>ssh</code> connection to the cluster so you can connect securely without typing the password every time. On your own computer, open the terminal of your choice and run the command below. This will generate a private/public key-pair with no password. If you have a key already, you can just use that (the command will warn you if you do).</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-q</span> <span class="at">-N</span> <span class="st">""</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Run the command below to copy the public key to GenomeDK. You will be asked to enter your password for the cluster.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-copy-id</span> <span class="at">-i</span> ~/.ssh/id_ed25519 <span class="op">&lt;</span>username<span class="op">&gt;</span>@login.genome.au.dk</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>You should now be able to log in to the cluster without typing your password. Running the command below, you should not be prompted for a password.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>username<span class="op">&gt;</span>@login.genome.au.dk</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>The chr2 data for this exerise is from 60 individuals in the 1000Genomes project. There are 20 individuals from each of the following populations: GBR (British in England and Scotland), JPT (Japanese), YRI (Yoruban).</p>
+<p>Create some symlinks that point to the following files:</p>
+<pre><code>ln -s ~/populationgenomics/data/relate_data/20140520.chr2.strict_mask.fasta
+ln -s ~/populationgenomics/data/relate_data/genetic_map_chr2_combined_b37.txt
+ln -s ~/populationgenomics/data/relate_data/human_ancestor_2.fa
+ln -s ~/populationgenomics/data/relate_data/60_inds.txt
+ln -s ~/populationgenomics/data/relate_data/chr2_130_145_phased.vcf.gz</code></pre>
+<p>This way it looks like the files are in your current folder. You can run <code>ls</code> to see them. The first file is a mask of genomic regions that either have abnormal read depth or contain repetitive elements. The second file is a recombination map. The third file is the ancestral state of every site, based on an alignment with gorilla, chimpanzee and human genomes. The fourth file is a metadata file detailing the population and region for each sample. The last file is the phased genotype VCF file.</p>
+<p>The documentation for Relate can be found <a href="https://myersgroup.github.io/relate/">here</a>.</p>
+<blockquote class="blockquote">
+<p><strong>NB:</strong> Running Relate below, you should be aware that names of input files are always supplied without the file extensions.</p>
+</blockquote>
+<p>Relate does not accept the standard VCF file format, but instead uses a haps/sample format. You can read up on in the Relate documentation. The authors have been so kind as to supply a script to transform it. First, the vcf is converted to another file format (haplotype file format). If you want to know how it is structured, you can read about it <a href="https://www.cog-genomics.org/plink/2.0/formats#haps">here</a>.</p>
+<pre><code>~/populationgenomics/software/relate/bin/RelateFileFormats --mode ConvertFromVcf --haps chr2.haps --sample chr2.sample -i chr2_130_145_phased</code></pre>
+<p>Then, repetitive (unreliably sequenced) regions must be masked to exclude them form our analysis. We also need to assign each variant as either ancestral or derived using the chimpanzee genome. We do both with this command:</p>
+<pre><code>~/populationgenomics/software/relate/scripts/PrepareInputFiles/PrepareInputFiles.sh --haps chr2.haps --sample chr2.sample --ancestor human_ancestor_2.fa --mask 20140520.chr2.strict_mask.fasta -o prep.chr2</code></pre>
+<p>Inspect the generated files.</p>
+<p><strong>Q1: How many SNPs were removed in this filtering step?</strong></p>
+<p>Hint: <code>cat chr2.haps | wc -l</code> counts the number of lines in <code>chr2.haps</code>. And <code>zcat</code> is <code>cat</code> for <code>.gz</code> files.</p>
 </section>
-<section id="vs-code-on-the-cluster" class="level2">
-<h2 class="anchored" data-anchor-id="vs-code-on-the-cluster">VS code on the cluster</h2>
-<p>Now that you have this set up, you can use vscode to log in. To set this up, click the icon depicting four squares in the leftmost icon bar. In the panel that expands, use the top search field to search for “Remote Development” and install the extension pack. Once you have done that, you can click the bottom left corner with the two facing arrows and select “Connect to host…” or “Connect current window to host…”, enter username@login.genome.au.dk and press enter. Once vscode has installed some extensions, you are logged in. Now you can open vscode in whatever folder you want. Open <code>populationgenomics/students/username</code>, which is your folder for the course exercises. Once logged into the cluster wih vscode, you an right-click files in the file browser and select “Download”. To upload files to the cluster folder, you can just drag them into the file browser.</p>
+<section id="build-trees-along-the-genome" class="level2">
+<h2 class="anchored" data-anchor-id="build-trees-along-the-genome">Build trees along the genome</h2>
+<p>Now, the input is fully prepared, and Relate can be run. This should take less than a minute.</p>
+<pre><code>~/populationgenomics/software/relate/bin/Relate --mode All -m 1.25e-8 -N 30000 --haps prep.chr2.haps.gz --sample prep.chr2.sample.gz --map genetic_map_chr2_combined_b37.txt -o chr2_relate</code></pre>
+<p><strong>Q2: How many SNPs are left per haplotype?</strong></p>
 </section>
-<section id="install-pixi-on-your-cluster-account" class="level2">
-<h2 class="anchored" data-anchor-id="install-pixi-on-your-cluster-account">Install Pixi on your cluster account</h2>
-<p>You need to the Pixi package manager to install the tools you need for each exercise. Log in to the cluster and install pixi by running this command in the vscode terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://pixi.sh/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="testing-your-setup" class="level2">
-<h2 class="anchored" data-anchor-id="testing-your-setup">Testing your setup</h2>
-<p>Check that your current directory is your personal folder under populationgenomics/</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Make a folder for your small test project:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> tester</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> tester</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> init</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> add jupyter nodejs ipykernel seaborn </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> workspace channel add munch-group</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> add iplot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="running-commands-in-the-terminal" class="level2">
-<h2 class="anchored" data-anchor-id="running-commands-in-the-terminal">Running commands in the terminal</h2>
-<p>When you log into the cluster you land on the “front-end” of the cluster. The “front-end” is a single machine shared by anyone who log in. You cannot run resource intensive jobs there, but commands that finish in less than ten seconds are ok. For commands that take a long time to run, you need to ask for one of the computing machines on the cluster to run it on instead. Run the command below to request and log in to a computing machine. In this case you ask</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="at">--mem-per-cpu</span><span class="op">=</span>8g <span class="at">--time</span><span class="op">=</span>3:00:00 <span class="at">--account</span><span class="op">=</span>populationgenomics <span class="at">--pty</span> bash</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Thay way you will use at most eight gigabyte of memory, that you need at most three hours (the duration of the exercise), and that the computing expenses should be billed to the project <code>populationgenomics</code> (which is our course). When you execute the command your terminal will say “srun: job 40924828 queued and waiting for resources”. That means that you have asked for a machine. Once it prints “srun: job 40924828 has been allocated resources”, you have been logged into a computing node. If you execute the <code>hostname</code> command you will get something like <code>s05n20.genomedk.net</code>. <code>s05n20</code> is a computing mechine. Now you can execute any command you like without causing trouble for anyone. Now try to log out of the compute node by executing the <code>exit</code> command or by pressing <code>Ctrl-d</code>. If you execute the <code>hostname</code> command again you will get <code>fe1.genomedk.net</code>. <code>fe1</code> is the front-end. –&gt;</p>
+<section id="estimate-historical-population-size-and-reestimate-branch-lengths-of-trees" class="level2">
+<h2 class="anchored" data-anchor-id="estimate-historical-population-size-and-reestimate-branch-lengths-of-trees">Estimate historical population size and reestimate branch lengths of trees</h2>
+<p>The lengthiest process is this step, in which population size is estimated, and the population size is re-estimates branch lengths. This takes around 20 minutes. While you are waiting, explain to a fellow student how an ARG can be constructed backwards in time and how it can be constructed along the sequence. If time permits, make sure to also explain how the SMC and SMC’ models approximate the ARG.</p>
+<pre><code>~/populationgenomics/software/relate/scripts/EstimatePopulationSize/EstimatePopulationSize.sh -i chr2_relate -m 1.25e-8 --poplabels 60_inds.txt -o popsize --threshold 0</code></pre>
+<p>Relate outputs estimated mutation rate and coalescence times along the region</p>
+<p>Using the –pop_of_interest flag you can isolate specific populations and see their population size back through time.</p>
+<p><strong>Q3: Look at the files and see what you learn</strong></p>
+<p>We will revisit this exercise in later sessions. So for now, just have a look at some of the estimated trees to get an impression of what they look like. You can do this using the command below. You specify the position you want to see using the <code>--bp_of_interest</code> option. The command below produces a <code>tree.pdf</code> file showing the tree for position 14000000:</p>
+<pre><code>export POSITION=14000000 &amp;&amp; ~/populationgenomics/software/relate/scripts/TreeView/TreeView.sh --haps chr2.haps --sample chr2.sample --anc popsize.anc --mut popsize.mut --poplabels 60_inds.txt --years_per_gen 28 -o tree_$POSITION --bp_of_interest $POSITION</code></pre>
+<p>To see the tree files, it is most convenient to work through <code>slurm-jupyter</code>. So you can close your interactive slurm session and run this command to start <code>slurm-jupyter</code>:</p>
+<pre><code>slurm-jupyter -e pg-relate-bjarke -A populationgenomics -m 8g -t 2h -u your_user_name </code></pre>
+<p>Once you are in, you can start a terminal and activate your <code>pg-relate</code> environment and run the command above. The trees will appear in the file browser to the left where you can double-click to view them.</p>
+<p><strong>Q4: Try to view some trees close to each other and far from each other. Are close trees the same, why?</strong></p>
+<p><strong>Q5: Do trees become more different the further away from each other they are, why?</strong></p>
+<p><strong>Q6: How often do individuals from the same population form a single group? What does that tell you about lineage sorting in humans?</strong></p>
 
 
 </section>
@@ -749,13 +728,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../slides_2026/slides.html" class="pagination-link" aria-label="Lecture slides">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lecture slides</span>
+      <a href="../../exercises/admixture/index.html" class="pagination-link" aria-label="Historical populations sizes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Historical populations sizes</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../exercises/mapping_and_calling/README.html" class="pagination-link" aria-label="Mapping and calling">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Mapping and calling</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../exercises/selection/index.html" class="pagination-link" aria-label="Positive selection">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Positive selection</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
