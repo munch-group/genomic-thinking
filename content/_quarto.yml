@@ -30,7 +30,8 @@ book:
       - exercises/cluster_practicals/index.qmd
       - exercises/mapping_and_calling/index.qmd
       - exercises/phasing/index.qmd
-      - exercises/arg_and_smc/index.qmd
+      - exercises/arg-dashboard/index.qmd
+      # - exercises/arg_and_smc/index.qmd
       - exercises/historical_pop_size/index.qmd
       - exercises/population_structure/index.qmd
       - exercises/admixture/index.qmd
